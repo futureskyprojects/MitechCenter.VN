@@ -20561,8 +20561,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_MetaLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_MetaLayout.cshtml",
       "FileKind": "mvc"
     },
     {

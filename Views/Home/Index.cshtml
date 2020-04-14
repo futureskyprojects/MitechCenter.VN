@@ -1,499 +1,525 @@
 ﻿@{
+    Layout="~/Views/Shared/_MetaLayout.cshtml";
     ViewData["Title"] = "HOME";
 }
 
-<!-- ============================================================== -->
-<!-- Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
-<div class="page-breadcrumb">
-    <div class="row">
-        <div class="col-7 align-self-center">
-            <h3 class="page-title text-truncate text-dark font-weight-medium mb-1">Good Morning Jason!</h3>
-            <div class="d-flex align-items-center">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb m-0 p-0">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
-                        </li>
-                    </ol>
+<!--::header part start::-->
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo" height="47"> </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Trang Chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Tin tức
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="single-blog.html">Tin tức - Sự kiện</a>
+                                    <a class="dropdown-item" href="elements.html">Chia sẻ kiến thức</a>
+                                    <a class="dropdown-item" href="elements.html">Công nghệ thông tin</a>
+                                    <a class="dropdown-item" href="elements.html">TIẾNG ANH</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cource.html">Khóa học</a>
+                            </li>
+                            <li class="d-none d-lg-block">
+                                <a class="btn_1" href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
-        <div class="col-5 align-self-center">
-            <div class="customize-input float-right">
-                <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
-                    <option selected>Aug 19</option>
-                    <option value="1">July 19</option>
-                    <option value="2">Jun 19</option>
-                </select>
-            </div>
-        </div>
     </div>
-</div>
-<!-- ============================================================== -->
-<!-- End Bread crumb and right sidebar toggle -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- Container fluid  -->
-<!-- ============================================================== -->
-<div class="container-fluid">
-    <!-- *************************************************************** -->
-    <!-- Start First Cards -->
-    <!-- *************************************************************** -->
-    <div class="card-group">
-        <div class="card border-right">
-            <div class="card-body">
-                <div class="d-flex d-lg-flex d-md-block align-items-center">
-                    <div>
-                        <div class="d-inline-flex align-items-center">
-                            <h2 class="text-dark mb-1 font-weight-medium">236</h2>
-                            <span
-                                class="badge bg-primary font-12 text-white font-weight-medium badge-pill ml-2 d-lg-block d-md-none">+18.33%</span>
-                        </div>
-                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">New Clients</h6>
-                    </div>
-                    <div class="ml-auto mt-md-3 mt-lg-0">
-                        <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card border-right">
-            <div class="card-body">
-                <div class="d-flex d-lg-flex d-md-block align-items-center">
-                    <div>
-                        <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium"><sup
-                                class="set-doller">$</sup>18,306</h2>
-                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Earnings of Month
-                        </h6>
-                    </div>
-                    <div class="ml-auto mt-md-3 mt-lg-0">
-                        <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card border-right">
-            <div class="card-body">
-                <div class="d-flex d-lg-flex d-md-block align-items-center">
-                    <div>
-                        <div class="d-inline-flex align-items-center">
-                            <h2 class="text-dark mb-1 font-weight-medium">1538</h2>
-                            <span
-                                class="badge bg-danger font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">-18.33%</span>
-                        </div>
-                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">New Projects</h6>
-                    </div>
-                    <div class="ml-auto mt-md-3 mt-lg-0">
-                        <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex d-lg-flex d-md-block align-items-center">
-                    <div>
-                        <h2 class="text-dark mb-1 font-weight-medium">864</h2>
-                        <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Projects</h6>
-                    </div>
-                    <div class="ml-auto mt-md-3 mt-lg-0">
-                        <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+</header>
+<!-- Header part end-->
+
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-xl-6">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h5>Every child yearns to learn</h5>
+                        <h1>Making Your Childs
+                            World Better</h1>
+                        <p>Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
+                            his void unto last session for bite. Set have great you'll male grass yielding yielding
+                            man</p>
+                        <a href="#" class="btn_1">View Course </a>
+                        <a href="#" class="btn_2">Get Started </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- *************************************************************** -->
-    <!-- End First Cards -->
-    <!-- *************************************************************** -->
-    <!-- *************************************************************** -->
-    <!-- Start Sales Charts Section -->
-    <!-- *************************************************************** -->
-    <div class="row">
-        <div class="col-lg-4 col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Total Sales</h4>
-                    <div id="campaign-v2" class="mt-2" style="height:283px; width:100%;"></div>
-                    <ul class="list-style-none mb-0">
-                        <li>
-                            <i class="fas fa-circle text-primary font-10 mr-2"></i>
-                            <span class="text-muted">Direct Sales</span>
-                            <span class="text-dark float-right font-weight-medium">$2346</span>
-                        </li>
-                        <li class="mt-3">
-                            <i class="fas fa-circle text-danger font-10 mr-2"></i>
-                            <span class="text-muted">Referral Sales</span>
-                            <span class="text-dark float-right font-weight-medium">$2108</span>
-                        </li>
-                        <li class="mt-3">
-                            <i class="fas fa-circle text-cyan font-10 mr-2"></i>
-                            <span class="text-muted">Affiliate Sales</span>
-                            <span class="text-dark float-right font-weight-medium">$1204</span>
-                        </li>
+</section>
+<!-- banner part start-->
+
+<!-- feature_part start-->
+<section class="feature_part">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xl-3 align-self-center">
+                <div class="single_feature_text ">
+                    <h2>Awesome <br> Feature</h2>
+                    <p>Set have great you male grass yielding an yielding first their you're
+                        have called the abundantly fruit were man </p>
+                    <a href="#" class="btn_1">Read More</a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <span class="single_feature_icon"><i class="ti-layers"></i></span>
+                        <h4>Better Future</h4>
+                        <p>Set have great you male grasses yielding yielding first their to
+                            called deep abundantly Set have great you male</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <span class="single_feature_icon"><i class="ti-new-window"></i></span>
+                        <h4>Qualified Trainers</h4>
+                        <p>Set have great you male grasses yielding yielding first their to called
+                            deep abundantly Set have great you male</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+                <div class="single_feature">
+                    <div class="single_feature_part single_feature_part_2">
+                        <span class="single_service_icon style_icon"><i class="ti-light-bulb"></i></span>
+                        <h4>Job Oppurtunity</h4>
+                        <p>Set have great you male grasses yielding yielding first their to called deep
+                            abundantly Set have great you male</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- upcoming_event part start-->
+
+<!-- learning part start-->
+<section class="learning_part">
+    <div class="container">
+        <div class="row align-items-sm-center align-items-lg-stretch">
+            <div class="col-md-7 col-lg-7">
+                <div class="learning_img">
+                    <img src="img/learning_img.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-5">
+                <div class="learning_member_text">
+                    <h5>About us</h5>
+                    <h2>Learning with Love
+                        and Laughter</h2>
+                    <p>Fifth saying upon divide divide rule for deep their female all hath brind Days and beast
+                        greater grass signs abundantly have greater also
+                        days years under brought moveth.</p>
+                    <ul>
+                        <li><span class="ti-pencil-alt"></span>Him lights given i heaven second yielding seas
+                            gathered wear</li>
+                        <li><span class="ti-ruler-pencil"></span>Fly female them whales fly them day deep given
+                            night.</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Net Income</h4>
-                    <div class="net-income mt-4 position-relative" style="height:294px;"></div>
-                    <ul class="list-inline text-center mt-5 mb-2">
-                        <li class="list-inline-item text-muted font-italic">Sales for this month</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-12">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title mb-4">Earning by Location</h4>
-                    <div class="" style="height:180px">
-                        <div id="visitbylocate" style="height:100%"></div>
-                    </div>
-                    <div class="row mb-3 align-items-center mt-1 mt-5">
-                        <div class="col-4 text-right">
-                            <span class="text-muted font-14">India</span>
-                        </div>
-                        <div class="col-5">
-                            <div class="progress" style="height: 5px;">
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="col-3 text-right">
-                            <span class="mb-0 font-14 text-dark font-weight-medium">28%</span>
-                        </div>
-                    </div>
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-4 text-right">
-                            <span class="text-muted font-14">UK</span>
-                        </div>
-                        <div class="col-5">
-                            <div class="progress" style="height: 5px;">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 74%"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="col-3 text-right">
-                            <span class="mb-0 font-14 text-dark font-weight-medium">21%</span>
-                        </div>
-                    </div>
-                    <div class="row mb-3 align-items-center">
-                        <div class="col-4 text-right">
-                            <span class="text-muted font-14">USA</span>
-                        </div>
-                        <div class="col-5">
-                            <div class="progress" style="height: 5px;">
-                                <div class="progress-bar bg-cyan" role="progressbar" style="width: 60%"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="col-3 text-right">
-                            <span class="mb-0 font-14 text-dark font-weight-medium">18%</span>
-                        </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-4 text-right">
-                            <span class="text-muted font-14">China</span>
-                        </div>
-                        <div class="col-5">
-                            <div class="progress" style="height: 5px;">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                        <div class="col-3 text-right">
-                            <span class="mb-0 font-14 text-dark font-weight-medium">12%</span>
-                        </div>
-                    </div>
+                    <a href="#" class="btn_1">Read More</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- *************************************************************** -->
-    <!-- End Sales Charts Section -->
-    <!-- *************************************************************** -->
-    <!-- *************************************************************** -->
-    <!-- Start Location and Earnings Charts Section -->
-    <!-- *************************************************************** -->
-    <div class="row">
-        <div class="col-md-6 col-lg-8">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-start">
-                        <h4 class="card-title mb-0">Earning Statistics</h4>
-                        <div class="ml-auto">
-                            <div class="dropdown sub-dropdown">
-                                <button class="btn btn-link text-muted dropdown-toggle" type="button"
-                                    id="dd1" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i data-feather="more-vertical"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                    <a class="dropdown-item" href="#">Insert</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
+</section>
+<!-- learning part end-->
+
+<!-- member_counter counter start -->
+<section class="member_counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_member_counter">
+                    <span class="counter">1024</span>
+                    <h4>All Teachers</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_member_counter">
+                    <span class="counter">960</span>
+                    <h4> All Students</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_member_counter">
+                    <span class="counter">1020</span>
+                    <h4>Online Students</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single_member_counter">
+                    <span class="counter">820</span>
+                    <h4>Ofline Students</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- member_counter counter end -->
+
+<!--::review_part start::-->
+<section class="special_cource padding_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5">
+                <div class="section_tittle text-center">
+                    <p>popular courses</p>
+                    <h2>Special Courses</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_special_cource">
+                    <img src="img/special_cource_1.png" class="special_img" alt="">
+                    <div class="special_cource_text">
+                        <a href="course-details.html" class="btn_4">Web Development</a>
+                        <h4>$130.00</h4>
+                        <a href="course-details.html"><h3>Web Development</h3></a>
+                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                        <div class="author_info">
+                            <div class="author_img">
+                                <img src="img/author/author_1.png" alt="">
+                                <div class="author_info_text">
+                                    <p>Conduct by:</p>
+                                    <h5><a href="#">James Well</a></h5>
+                                </div>
+                            </div>
+                            <div class="author_rating">
+                                <div class="rating">
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
+                                </div>
+                                <p>3.8 Ratings</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_special_cource">
+                    <img src="img/special_cource_2.png" class="special_img" alt="">
+                    <div class="special_cource_text">
+                        <a href="course-details.html" class="btn_4">design</a>
+                        <h4>$160.00</h4>
+                        <a href="course-details.html"> <h3>Web UX/UI Design </h3></a>
+                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                        <div class="author_info">
+                            <div class="author_img">
+                                <img src="img/author/author_2.png" alt="">
+                                <div class="author_info_text">
+                                    <p>Conduct by:</p>
+                                    <h5><a href="#">James Well</a></h5>
+                                </div>
+                            </div>
+                            <div class="author_rating">
+                                <div class="rating">
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
+                                </div>
+                                <p>3.8 Ratings</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="single_special_cource">
+                    <img src="img/special_cource_3.png" class="special_img" alt="">
+                    <div class="special_cource_text">
+                        <a href="course-details.html" class="btn_4">Wordpress</a>
+                        <h4>$140.00</h4>
+                        <a href="course-details.html">  <h3>Wordpress Development</h3> </a> 
+                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                        <div class="author_info">
+                            <div class="author_img">
+                                <img src="img/author/author_3.png" alt="">
+                                <div class="author_info_text">
+                                    <p>Conduct by:</p>
+                                    <h5><a href="#">James Well</a></h5>
+                                </div>
+                            </div>
+                            <div class="author_rating">
+                                <div class="rating">
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
+                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
+                                </div>
+                                <p>3.8 Ratings</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::blog_part end::-->
+
+<!-- learning part start-->
+<section class="advance_feature learning_part">
+    <div class="container">
+        <div class="row align-items-sm-center align-items-xl-stretch">
+            <div class="col-md-6 col-lg-6">
+                <div class="learning_member_text">
+                    <h5>Advance feature</h5>
+                    <h2>Our Advance Educator
+                        Learning System</h2>
+                    <p>Fifth saying upon divide divide rule for deep their female all hath brind mid Days
+                        and beast greater grass signs abundantly have greater also use over face earth
+                        days years under brought moveth she star</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            <div class="learning_member_text_iner">
+                                <span class="ti-pencil-alt"></span>
+                                <h4>Learn Anywhere</h4>
+                                <p>There earth face earth behold she star so made void two given and also our</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            <div class="learning_member_text_iner">
+                                <span class="ti-stamp"></span>
+                                <h4>Expert Teacher</h4>
+                                <p>There earth face earth behold she star so made void two given and also our</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="learning_img">
+                    <img src="img/advance_feature_img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- learning part end-->
+
+<!--::review_part start::-->
+<section class="testimonial_part">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-5">
+                <div class="section_tittle text-center">
+                    <p>tesimonials</p>
+                    <h2>Happy Students</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="textimonial_iner owl-carousel">
+                    <div class="testimonial_slider">
+                        <div class="row">
+                            <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xl-2 col-sm-4">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_1.png" alt="#">
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-none d-xl-block">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 d-none d-xl-block">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_1.png" alt="#">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="pl-4 mb-5">
-                        <div class="stats ct-charts position-relative" style="height: 315px;"></div>
-                    </div>
-                    <ul class="list-inline text-center mt-4 mb-0">
-                        <li class="list-inline-item text-muted font-italic">Earnings for this month</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">Recent Activity</h4>
-                    <div class="mt-4 activity">
-                        <div class="d-flex align-items-start border-left-line pb-3">
-                            <div>
-                                <a href="javascript:void(0)" class="btn btn-info btn-circle mb-2 btn-item">
-                                    <i data-feather="shopping-cart"></i>
-                                </a>
+                    <div class="testimonial_slider">
+                        <div class="row">
+                            <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
                             </div>
-                            <div class="ml-3 mt-2">
-                                <h5 class="text-dark font-weight-medium mb-2">New Product Sold!</h5>
-                                <p class="font-14 mb-2 text-muted">John Musa just purchased <br> Cannon 5M
-                                    Camera.
-                                </p>
-                                <span class="font-weight-light font-14 text-muted">10 Minutes Ago</span>
+                            <div class="col-lg-4 col-xl-2 col-sm-4">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_2.png" alt="#">
+                                </div>
                             </div>
-                        </div>
-                        <div class="d-flex align-items-start border-left-line pb-3">
-                            <div>
-                                <a href="javascript:void(0)"
-                                    class="btn btn-danger btn-circle mb-2 btn-item">
-                                    <i data-feather="message-square"></i>
-                                </a>
+                            <div class="col-xl-4 d-none d-xl-block">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
                             </div>
-                            <div class="ml-3 mt-2">
-                                <h5 class="text-dark font-weight-medium mb-2">New Support Ticket</h5>
-                                <p class="font-14 mb-2 text-muted">Richardson just create support <br>
-                                    ticket</p>
-                                <span class="font-weight-light font-14 text-muted">25 Minutes Ago</span>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-start border-left-line">
-                            <div>
-                                <a href="javascript:void(0)" class="btn btn-cyan btn-circle mb-2 btn-item">
-                                    <i data-feather="bell"></i>
-                                </a>
-                            </div>
-                            <div class="ml-3 mt-2">
-                                <h5 class="text-dark font-weight-medium mb-2">Notification Pending Order!
-                                </h5>
-                                <p class="font-14 mb-2 text-muted">One Pending order from Ryne <br> Doe</p>
-                                <span class="font-weight-light font-14 mb-1 d-block text-muted">2 Hours
-                                    Ago</span>
-                                <a href="javascript:void(0)" class="font-14 border-bottom pb-1 border-info">Load More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- *************************************************************** -->
-    <!-- End Location and Earnings Charts Section -->
-    <!-- *************************************************************** -->
-    <!-- *************************************************************** -->
-    <!-- Start Top Leader Table -->
-    <!-- *************************************************************** -->
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-center mb-4">
-                        <h4 class="card-title">Top Leaders</h4>
-                        <div class="ml-auto">
-                            <div class="dropdown sub-dropdown">
-                                <button class="btn btn-link text-muted dropdown-toggle" type="button"
-                                    id="dd1" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i data-feather="more-vertical"></i>
-                                </button>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd1">
-                                    <a class="dropdown-item" href="#">Insert</a>
-                                    <a class="dropdown-item" href="#">Update</a>
-                                    <a class="dropdown-item" href="#">Delete</a>
+                            <div class="col-xl-2 d-none d-xl-block">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_1.png" alt="#">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table no-wrap v-middle mb-0">
-                            <thead>
-                                <tr class="border-0">
-                                    <th class="border-0 font-14 font-weight-medium text-muted">Team Lead
-                                    </th>
-                                    <th class="border-0 font-14 font-weight-medium text-muted px-2">Project
-                                    </th>
-                                    <th class="border-0 font-14 font-weight-medium text-muted">Team</th>
-                                    <th class="border-0 font-14 font-weight-medium text-muted text-center">
-                                        Status
-                                    </th>
-                                    <th class="border-0 font-14 font-weight-medium text-muted text-center">
-                                        Weeks
-                                    </th>
-                                    <th class="border-0 font-14 font-weight-medium text-muted">Budget</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border-top-0 px-2 py-4">
-                                        <div class="d-flex no-block align-items-center">
-                                            <div class="mr-3"><img
-                                                    src="assets/images/users/widget-table-pic1.jpg"
-                                                    alt="user" class="rounded-circle" width="45"
-                                                    height="45" /></div>
-                                            <div class="">
-                                                <h5 class="text-dark mb-0 font-16 font-weight-medium">Hanna
-                                                    Gover</h5>
-                                                <span class="text-muted font-14">hgover@gmail.com</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="border-top-0 text-muted px-2 py-4 font-14">Elite Admin</td>
-                                    <td class="border-top-0 px-2 py-4">
-                                        <div class="popover-icon">
-                                            <a class="btn btn-primary rounded-circle btn-circle font-12"
-                                                href="javascript:void(0)">DS</a>
-                                            <a class="btn btn-danger rounded-circle btn-circle font-12 popover-item"
-                                                href="javascript:void(0)">SS</a>
-                                            <a class="btn btn-cyan rounded-circle btn-circle font-12 popover-item"
-                                                href="javascript:void(0)">RP</a>
-                                            <a class="btn btn-success text-white rounded-circle btn-circle font-20"
-                                                href="javascript:void(0)">+</a>
-                                        </div>
-                                    </td>
-                                    <td class="border-top-0 text-center px-2 py-4"><i
-                                            class="fa fa-circle text-primary font-12" data-toggle="tooltip"
-                                            data-placement="top" title="In Testing"></i></td>
-                                    <td
-                                        class="border-top-0 text-center font-weight-medium text-muted px-2 py-4">
-                                        35
-                                    </td>
-                                    <td class="font-weight-medium text-dark border-top-0 px-2 py-4">$96K
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-2 py-4">
-                                        <div class="d-flex no-block align-items-center">
-                                            <div class="mr-3"><img
-                                                    src="assets/images/users/widget-table-pic2.jpg"
-                                                    alt="user" class="rounded-circle" width="45"
-                                                    height="45" /></div>
-                                            <div class="">
-                                                <h5 class="text-dark mb-0 font-16 font-weight-medium">Daniel
-                                                    Kristeen
-                                                </h5>
-                                                <span class="text-muted font-14">Kristeen@gmail.com</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-muted px-2 py-4 font-14">Real Homes WP Theme</td>
-                                    <td class="px-2 py-4">
-                                        <div class="popover-icon">
-                                            <a class="btn btn-primary rounded-circle btn-circle font-12"
-                                                href="javascript:void(0)">DS</a>
-                                            <a class="btn btn-danger rounded-circle btn-circle font-12 popover-item"
-                                                href="javascript:void(0)">SS</a>
-                                            <a class="btn btn-success text-white rounded-circle btn-circle font-20"
-                                                href="javascript:void(0)">+</a>
-                                        </div>
-                                    </td>
-                                    <td class="text-center px-2 py-4"><i
-                                            class="fa fa-circle text-success font-12" data-toggle="tooltip"
-                                            data-placement="top" title="Done"></i>
-                                    </td>
-                                    <td class="text-center text-muted font-weight-medium px-2 py-4">32</td>
-                                    <td class="font-weight-medium text-dark px-2 py-4">$85K</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-2 py-4">
-                                        <div class="d-flex no-block align-items-center">
-                                            <div class="mr-3"><img
-                                                    src="assets/images/users/widget-table-pic3.jpg"
-                                                    alt="user" class="rounded-circle" width="45"
-                                                    height="45" /></div>
-                                            <div class="">
-                                                <h5 class="text-dark mb-0 font-16 font-weight-medium">Julian
-                                                    Josephs
-                                                </h5>
-                                                <span class="text-muted font-14">Josephs@gmail.com</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-muted px-2 py-4 font-14">MedicalPro WP Theme</td>
-                                    <td class="px-2 py-4">
-                                        <div class="popover-icon">
-                                            <a class="btn btn-primary rounded-circle btn-circle font-12"
-                                                href="javascript:void(0)">DS</a>
-                                            <a class="btn btn-danger rounded-circle btn-circle font-12 popover-item"
-                                                href="javascript:void(0)">SS</a>
-                                            <a class="btn btn-cyan rounded-circle btn-circle font-12 popover-item"
-                                                href="javascript:void(0)">RP</a>
-                                            <a class="btn btn-success text-white rounded-circle btn-circle font-20"
-                                                href="javascript:void(0)">+</a>
-                                        </div>
-                                    </td>
-                                    <td class="text-center px-2 py-4"><i
-                                            class="fa fa-circle text-primary font-12" data-toggle="tooltip"
-                                            data-placement="top" title="Done"></i>
-                                    </td>
-                                    <td class="text-center text-muted font-weight-medium px-2 py-4">29</td>
-                                    <td class="font-weight-medium text-dark px-2 py-4">$81K</td>
-                                </tr>
-                                <tr>
-                                    <td class="px-2 py-4">
-                                        <div class="d-flex no-block align-items-center">
-                                            <div class="mr-3"><img
-                                                    src="assets/images/users/widget-table-pic4.jpg"
-                                                    alt="user" class="rounded-circle" width="45"
-                                                    height="45" /></div>
-                                            <div class="">
-                                                <h5 class="text-dark mb-0 font-16 font-weight-medium">Jan
-                                                    Petrovic
-                                                </h5>
-                                                <span class="text-muted font-14">hgover@gmail.com</span>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-muted px-2 py-4 font-14">Hosting Press HTML</td>
-                                    <td class="px-2 py-4">
-                                        <div class="popover-icon">
-                                            <a class="btn btn-primary rounded-circle btn-circle font-12"
-                                                href="javascript:void(0)">DS</a>
-                                            <a class="btn btn-success text-white font-20 rounded-circle btn-circle"
-                                                href="javascript:void(0)">+</a>
-                                        </div>
-                                    </td>
-                                    <td class="text-center px-2 py-4"><i
-                                            class="fa fa-circle text-danger font-12" data-toggle="tooltip"
-                                            data-placement="top" title="In Progress"></i></td>
-                                    <td class="text-center text-muted font-weight-medium px-2 py-4">23</td>
-                                    <td class="font-weight-medium text-dark px-2 py-4">$80K</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="testimonial_slider">
+                        <div class="row">
+                            <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xl-2 col-sm-4">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_3.png" alt="#">
+                                </div>
+                            </div>
+                            <div class="col-xl-4 d-none d-xl-block">
+                                <div class="testimonial_slider_text">
+                                    <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                        hath herb divided divide creepeth living shall i call beginning
+                                        third sea itself set</p>
+                                    <h4>Michel Hashale</h4>
+                                    <h5> Sr. Web designer</h5>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 d-none d-xl-block">
+                                <div class="testimonial_slider_img">
+                                    <img src="img/testimonial_img_1.png" alt="#">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--::blog_part end::-->
+
+<!--::blog_part start::-->
+<section class="blog_part section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5">
+                <div class="section_tittle text-center">
+                    <p>Our Blog</p>
+                    <h2>Students Blog</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-blog">
+                    <div class="card">
+                        <img src="img/blog/blog_1.png" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <a href="#" class="btn_4">Design</a>
+                            <a href="blog.html">
+                                <h5 class="card-title">Dry beginning sea over tree</h5>
+                            </a>
+                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                            <ul>
+                                <li> <span class="ti-comments"></span>2 Comments</li>
+                                <li> <span class="ti-heart"></span>2k Like</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-blog">
+                    <div class="card">
+                        <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <a href="#" class="btn_4">Developing</a>
+                            <a href="blog.html">
+                                <h5 class="card-title">All beginning air two likeness</h5>
+                            </a>
+                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                            <ul>
+                                <li> <span class="ti-comments"></span>2 Comments</li>
+                                <li> <span class="ti-heart"></span>2k Like</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-blog">
+                    <div class="card">
+                        <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <a href="#" class="btn_4">Design</a>
+                            <a href="blog.html">
+                                <h5 class="card-title">Form day seasons sea hand</h5>
+                            </a>
+                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                            <ul>
+                                <li> <span class="ti-comments"></span>2 Comments</li>
+                                <li> <span class="ti-heart"></span>2k Like</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- *************************************************************** -->
-    <!-- End Top Leader Table -->
-    <!-- *************************************************************** -->
-</div>
-<!-- ============================================================== -->
-<!-- End Container fluid  -->
-<!-- ============================================================== -->
+</section>
+<!--::blog_part end::-->

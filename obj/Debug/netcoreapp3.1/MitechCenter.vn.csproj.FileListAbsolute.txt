@@ -20,7 +20,6 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.TagHelpers.input.cach
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.TagHelpers.output.cache
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.RazorCoreGenerate.cache
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
@@ -41,3 +40,4 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Shared\_Valida
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Home\Index.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\_ViewImports.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\_ViewStart.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_MetaLayout.cshtml.g.cs
