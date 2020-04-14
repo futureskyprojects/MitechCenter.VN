@@ -20526,13 +20526,33 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\MCMS\\Index.cshtml",
-      "TargetPath": "Views\\MCMS\\Index.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\AuthenticationLayout.cshtml",
-      "TargetPath": "Views\\Shared\\AuthenticationLayout.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Login\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Login\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\AuthenticationLayout.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Shared\\AuthenticationLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20546,13 +20566,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\Login\\Index.cshtml",
-      "TargetPath": "Views\\Login\\Index.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {

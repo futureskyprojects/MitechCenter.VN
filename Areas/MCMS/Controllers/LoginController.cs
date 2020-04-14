@@ -1,7 +1,8 @@
 
 using Microsoft.AspNetCore.Mvc;
-namespace SampleMVCApps.Controllers
+namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
+    [Area("MCMS")]
     public class LoginController : Controller
     {
         public IActionResult Index()

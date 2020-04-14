@@ -1,9 +1,9 @@
 
 using Microsoft.AspNetCore.Mvc;
-namespace SampleMVCApps.Controllers
+namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
-    [Route("[controller]")]
-    public class MCMSController : Controller
+    [Area("MCMS")]
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {

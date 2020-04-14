@@ -1,6 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
-namespace SampleMVCApps.Controllers
+namespace MitechCenter.vn.Controllers
 {
     public class BaseController : Controller
     {
