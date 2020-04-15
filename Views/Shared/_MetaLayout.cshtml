@@ -24,9 +24,64 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carousel.css"/>
 </head>
 
 <body>
+    <!--::header part start::-->
+    <header class="main_menu home_menu">
+        <div class="header_top">
+            <div class="container">
+                <div class="justify-content-between d-flex py-2 text-white">
+                    Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo" height="47"> </a>
+                        <button class="navbar-toggler trans" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Trang Chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">Giới thiệu</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Tin tức
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="single-blog.html">Tin tức - Sự kiện</a>
+                                        <a class="dropdown-item" href="elements.html">Chia sẻ kiến thức</a>
+                                        <a class="dropdown-item" href="elements.html">Công nghệ thông tin</a>
+                                        <a class="dropdown-item" href="elements.html">TIẾNG ANH</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="cource.html">Khóa học</a>
+                                </li>
+                                <li class="d-none d-lg-block">
+                                    <a class="btn_1" href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
     @RenderBody()
     <!-- footer part start-->
     <footer class="footer-area">
@@ -102,6 +157,21 @@
     <script src="js/waypoints.min.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
+
+<style>
+    .menu_fixed .header_top {
+        display: none;
+    }
+    .header_top {
+        background: #0078c0;
+    }
+    .main_menu {
+        -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.12);
+        box-shadow: 0 0 15px 0 rgba(0,0,0,.12);
+        background: #fff;
+    }
+</style>
 
 </html>

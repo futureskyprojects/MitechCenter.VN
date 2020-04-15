@@ -9,7 +9,7 @@
 .main_menu .navbar-toggler:after,
 .banner_part .banner_text .btn_1,
 .feature_part .single_feature:hover span {
-    background-image: linear-gradient(to left, #00B4DB, #0083B0);
+    background-image: linear-gradient(to left, #ee390f 0%, #f9b700 51%, #ee390f 100%);
 }
 
 
@@ -2804,8 +2804,7 @@ ul {
 
 /* line 90, E:/172 Etrain Education/172_Etrain_Education_html/sass/_menu.scss */
 
-.dropdown:hover .dropdown-menu,
-.show .dropdown-menu {
+.dropdown:hover .dropdown-menu {
     transform: scale(1);
 }
 
@@ -8701,169 +8700,3 @@ h6 {
 
 
 /*# sourceMappingURL=style.css.map */
-
-@media (max-width: 991px) {
-    .main_menu .main-menu-item ul li:hover>.nav-link::before,
-    .main_menu .main-menu-item ul .active>.nav-link::before {
-        width: 0;
-    }
-    .dropdown .dropdown-menu .dropdown-item:hover {
-        background-color: transparent !important;
-        color: #3e7cc2 !important;
-    }
-    .dropdown .dropdown-menu {
-        padding: 0;
-        margin-top: 0;
-        background-color: #FFF;
-        color: #000000;
-    }
-    .dropdown .dropdown-menu .dropdown-item {
-        font-weight: unset;
-        text-transform: uppercase;
-    }
-    .dropdown .dropdown-menu {
-        transform: scale(1);
-    }
-    .main_menu .main-menu-item .nav-item .dropdown-menu a {
-        padding: 15px 30px !important;
-    }
-    .company_item {
-        margin-bottom: 20px;
-    }
-    .our_company_area:before {
-        height: 600px !important;
-    }
-}
-
-.trans::after {
-    background-image: unset !important;
-}
-
-.navbar-toggler-icon {
-    width: 40px;
-    height: 40px;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    margin: 0px 20px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-}
-
-.show-navi .carousel-control-prev,
-.show-navi .carousel-control-next {
-    visibility: visible;
-    opacity: 1;
-}
-
-.our_company_area {
-    background: #ecf1f3;
-    position: relative;
-    z-index: 2;
-}
-
-.pad_top {
-    padding-top: 100px;
-}
-
-.our_company_inner .company_sub_title h5 {
-    color: #f18b41;
-    font-family: "Playfair Display", serif;
-    font-style: italic;
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.our_company_inner .company_sub_title h4 {
-    color: #fff;
-    font-size: 26px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    margin-right: -14px;
-    margin-bottom: 56px;
-}
-
-.our_company_inner .company_desc p {
-    color: #fff;
-    opacity: .8;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    line-height: 28px;
-    margin-top: 18px;
-    margin-bottom: 0;
-}
-
-.our_company_area:before {
-    content: "";
-    height: 485px;
-    background: #3e7cc2;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
-
-@media (min-width: 992px) {
-    .ol1 {
-        padding-left: 8.333333%;
-    }
-}
-
-@media (min-width: 992px) {
-    .our_company_inner .col-lg-8 {
-        -ms-flex: 0 0 58.333333%;
-        flex: 0 0 58.333333%;
-        max-width: 58.333333%;
-    }
-}
-
-@media (min-width: 768px) {
-    #creative-design-container {
-        margin-top: 30px;
-    }
-}
-
-.company_item {
-    background: #fff;
-}
-
-.company_item .company_img .img-fluid {
-    width: 100%;
-}
-
-.company_item .company_img {
-    overflow: hidden;
-    z-index: 3;
-    position: relative;
-}
-
-.company_item .company_text {
-    text-align: center;
-    padding: 32px 20px 32px 20px;
-}
-
-.more_btn {
-    color: #3e7cc2;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-
-.company_item .company_text p {
-    line-height: 1.5em;
-    height: 4.5em;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    margin-bottom: 25px;
-}
-
-.company_single_text {
-    text-align: center;
-    padding: 45px 0;
-}
