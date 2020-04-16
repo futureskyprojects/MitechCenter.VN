@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/carousel.css"/>
+    @RenderSection("styles", required: false)
 </head>
 
 <body>
@@ -90,7 +90,7 @@
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
                         <a href="index.html"> <img src="img/logo.png" alt=""> </a>
-                        <p>Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.</p>
+                        <p class="text-justify">Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
@@ -157,7 +157,7 @@
     <script src="js/waypoints.min.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
-    <script src="js/carousel.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 
 <style>
