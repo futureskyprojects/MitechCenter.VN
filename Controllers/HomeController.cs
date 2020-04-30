@@ -7,7 +7,8 @@ namespace MitechCenter.vn.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var homeViewModel = new HomeViewModel();
+            return View(homeViewModel);
         }
     }
 }

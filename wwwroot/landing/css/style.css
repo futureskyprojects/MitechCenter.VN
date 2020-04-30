@@ -6442,10 +6442,9 @@ h6 {
 }
 
 .chuong_trinh_dao_tao .special_cource_text {
-    max-height: 100%;
-    height: auto;
+    /* max-height: 100%; */
+    height: 100%;
     margin-right: 15px;
-    background: #ffffffb8;
     padding: 20px;
     bottom: 0;
     position: absolute;
@@ -6453,19 +6452,21 @@ h6 {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
+    background: #007cc2c7;
 }
 
 .chuong_trinh_dao_tao .special_cource_text:hover {
-    background: #007cc2c7;
+    background: #ffffffb8;
     height: 100% !important;
-}
-
-.chuong_trinh_dao_tao .special_cource_text p {
-    color: #0c2e60;
 }
 
 .chuong_trinh_dao_tao .special_cource_text:hover h3,
 .chuong_trinh_dao_tao .special_cource_text:hover p {
+    color: #0c2e60;
+}
+
+.chuong_trinh_dao_tao .special_cource_text h3,
+.chuong_trinh_dao_tao .special_cource_text p {
     color: #FFF;
 }
 

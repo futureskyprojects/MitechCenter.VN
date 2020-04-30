@@ -1,6 +1,10 @@
-﻿@{
+﻿@model HomeViewModel
+
+@{
     Layout="~/Views/Shared/_MetaLayout.cshtml";
-    ViewData["Title"] = "HOME";
+    ViewData["Title"] = @Model.title;
+    ViewData["SuperTitle"] = @Model.superTitle;
+    ViewData["HeaderCompanyOwner"] = @Model.headerCompanyOwner;
 }
 
 <!-- banner part start-->
