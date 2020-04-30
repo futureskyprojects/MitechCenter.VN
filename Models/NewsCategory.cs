@@ -16,11 +16,19 @@ namespace MitechCenter.vn.Models
         public string ncDescription { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
+        public DateTime? createAt { get; set; } = DateTime.Now;
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+        public DateTime? updateAt { get; set; } = DateTime.Now;
 
         public ICollection<News> News { get; set; }
+        public void DeepCopy(NewsCategory newsCategory)
+        {
+            this.ncId = newsCategory.ncId;
+            this.ncName = newsCategory.ncName;
+            this.ncDescription = newsCategory.ncDescription;
+            this.createAt = newsCategory.createAt;
+            this.updateAt = newsCategory.updateAt;
+        }
     }
 }

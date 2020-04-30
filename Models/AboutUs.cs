@@ -16,13 +16,26 @@ namespace MitechCenter.vn.Models
         public string auContent { get; set; }
         public int uId { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
+        [DefaultValue(false)]
+        public bool isServices { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+        public DateTime? createAt { get; set; } = DateTime.Now;
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        [DefaultValue("GETDATE()")]
+        public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("uId")]
         public virtual User User { get; set; }
+
+        public void DeepCopy(AboutUs about)
+        {
+            this.auId = about.auId;
+            this.auTitle = about.auTitle;
+            this.auContent = about.auContent;
+            this.uId = about.uId;
+            this.createAt = about.createAt;
+            this.updateAt = DateTime.Now;
+        }
     }
 }

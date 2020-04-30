@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -90,6 +92,19 @@ namespace MitechCenter.vn.Models
                 entity.ToTable(typeof(StaticElement).Name);
                 // Khởi tạo Index
                 entity.HasIndex(e => e.eId).HasName("FK_ElementTbl_Id_Index");
+                // Khởi tạo dữ liệu ban đầu
+                using (StreamReader r = File.OpenText("./statics/staticElements.json"))
+                {
+                    string json = r.ReadToEnd();
+                    List<StaticElement> ses = JsonConvert.DeserializeObject<List<StaticElement>>(json);
+                    for (int i = 0; i < ses.Count; i++)
+                    {
+                        ses[i].eId = i + 1;
+                        ses[i].createAt = DateTime.Now;
+                        ses[i].updateAt = DateTime.Now;
+                    }
+                    entity.HasData(ses);
+                }
             });
             #endregion
         }

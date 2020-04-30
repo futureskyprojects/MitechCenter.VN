@@ -21,15 +21,29 @@ namespace MitechCenter.vn.Models
         public string nFeatureImage { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
+        public DateTime? createAt { get; set; } = DateTime.Now;
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+        public DateTime? updateAt { get; set; } = DateTime.Now;
         
         [ForeignKey("ncId")]
         public virtual NewsCategory NewsCategory { get; set; }
 
         [ForeignKey("uId")]
         public virtual User User { get; set; }
+
+        public void DeepCopy(News news)
+        {
+            this.nId = news.nId;
+            this.ncId = news.ncId;
+            this.uId = news.uId;
+            this.nTitle = news.nTitle;
+            this.nDescription = news.nDescription;
+            this.nContent = news.nContent;
+            this.nTags = news.nTags;
+            this.nFeatureImage = news.nFeatureImage;
+            this.createAt = news.createAt;
+            this.updateAt = news.updateAt;
+        }
     }
 }

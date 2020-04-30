@@ -20,12 +20,25 @@ namespace MitechCenter.vn.Models
         public int? fReplyByUserId { get; set; }
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
+        public DateTime? createAt { get; set; } = DateTime.Now;
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+        public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("fReplyByUserId")]
         public virtual User User { get; set; }
+
+        public void DeepCopy(Feedback feedback)
+        {
+            this.fId = feedback.fId;
+            this.fFullname = feedback.fFullname;
+            this.fAddress = feedback.fAddress;
+            this.fPhone = feedback.fPhone;
+            this.fEmail = feedback.fEmail;
+            this.fContent = feedback.fContent;
+            this.fReplyByUserId = feedback.fReplyByUserId;
+            this.createAt = feedback.createAt;
+            this.updateAt = feedback.updateAt;
+        }
     }
 }

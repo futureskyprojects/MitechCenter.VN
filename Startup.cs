@@ -10,6 +10,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MitechCenter.vn.Models;
+using MitechCenter.vn.Models.DataManager;
+using MitechCenter.vn.Models.Repository;
 
 namespace MitechCenter.vn
 {
@@ -29,6 +32,14 @@ namespace MitechCenter.vn
             services.AddDbContext<Models.MitechCenterContext>(options =>
                 options.UseSqlServer(sqlConnectionString)
             );
+            services.AddScoped<IDataRepository<AboutUs>, AboutUsManager>();
+            services.AddScoped<IDataRepository<Course>, CourseManager>();
+            services.AddScoped<IDataRepository<Feedback>, FeedbackManager>();
+            services.AddScoped<IDataRepository<News>, NewsManager>();
+            services.AddScoped<IDataRepository<NewsCategory>, NewsCategoryManager>();
+            services.AddScoped<IDataRepository<StaticElement>, StaticElementManager>();
+            services.AddScoped<IDataRepository<Teacher>, TeacherManager>();
+            services.AddScoped<IDataRepository<User>, UserManager>();
             services.AddControllersWithViews();
         }
 

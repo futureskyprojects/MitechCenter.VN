@@ -20521,13 +20521,58 @@
   "RootNamespace": "MitechCenter.vn",
   "Documents": [
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\DecideToEstablish\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\DecideToEstablish\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\NewsCategory\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\NewsCategory\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Embed\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Embed\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Course\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Course\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Owner\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Owner\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Teacher\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Teacher\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\ServiceMotto\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\ServiceMotto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Organization\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Organization\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\_ViewStart.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\EducationProgram\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\EducationProgram\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20546,6 +20591,26 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\News\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Services\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Services\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Carousel\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Carousel\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Partner\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Partner\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\AuthenticationLayout.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Shared\\AuthenticationLayout.cshtml",
       "FileKind": "mvc"
@@ -20561,8 +20626,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\ContactInfo\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\ContactInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_MetaLayout.cshtml",
       "TargetPath": "Views\\Shared\\_MetaLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Copyright\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Copyright\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20571,8 +20646,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\DevelopmentMotto\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\DevelopmentMotto\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Logo\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Logo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -22,5 +22,14 @@ namespace MitechCenter.vn.Models
         public DateTime updateAt { get; set; } = DateTime.Now;
 
         public ICollection<Course> Courses { get; set; }
+
+        public void DeepCopy(Teacher teacher)
+        {
+            this.tId = teacher.tId;
+            this.tDisplayName = teacher.tDisplayName;
+            this.tAvatar = teacher.tAvatar;
+            this.createAt = teacher.createAt;
+            this.updateAt = teacher.updateAt;
+        }
     }
 }

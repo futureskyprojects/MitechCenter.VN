@@ -22,12 +22,26 @@ namespace MitechCenter.vn.Models
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
+        public DateTime? createAt { get; set; } = DateTime.Now;
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+        public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("tId")]
         public virtual Teacher Teacher { get; set; }
+
+        public void DeepCopy(Course course)
+        {
+            this.cId = course.cId;
+            this.tId = course.tId;
+            this.cName = course.cName;
+            this.cPrice = course.cPrice;
+            this.cLearningTime = course.cLearningTime;
+            this.cDescription = course.cDescription;
+            this.cDetail = course.cDetail;
+            this.cSchedule = course.cSchedule;
+            this.createAt = course.createAt;
+            this.updateAt = course.updateAt;
+        }
     }
 }
