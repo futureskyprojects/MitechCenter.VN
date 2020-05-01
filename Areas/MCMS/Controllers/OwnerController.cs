@@ -23,6 +23,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
             if (staticElement == null)
             {
                 staticElement = new StaticElement(StaticElementKey.OWNER);
+                Console.WriteLine(staticElement.eKey);
                 ViewBag.notification = Notification.Warning("LƯU Ý", "Bạn chưa cung cấp tên của cá nhân hay tổ chức sở hữu");
             }
             return View(staticElement);
@@ -31,6 +32,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
         [HttpPost]
         public IActionResult Index(StaticElement staticElement)
         {
+            Console.WriteLine(staticElement.eKey);
             ViewBag.notification = "";
             if (ModelState.IsValid)
             {
@@ -41,25 +43,21 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
                 }
                 else
                 {
-                    Console.WriteLine(staticElement.eId);
-                    if (staticElement.eId <= 0)
+                    StaticElement _temp = _context.Get(StaticElementKey.OWNER);
+                    if (_temp == null)
                     {
                         Console.WriteLine(staticElement.createAt);
                         Console.WriteLine(staticElement.updateAt);
+                        staticElement.createAt = DateTime.Now;
+                        staticElement.updateAt = DateTime.Now;
                         _context.Add(staticElement);
                     }
                     else
                     {
-                        StaticElement _temp = _context.Get(StaticElementKey.OWNER);
-                        if (_temp == null)
-                        {
-                            ViewBag.notification = Notification.Error("LỖI", "Không tìm thấy nội dung để cập nhật");
-                            return View(staticElement);
-                        }
-                        else
-                        {
-                            _context.Update(_temp, staticElement);
-                        }
+                        staticElement.eId = _temp.eId;
+                        staticElement.createAt = _temp.createAt;
+                        staticElement.updateAt = DateTime.Now;
+                        _context.Update(_temp, staticElement);
                     }
                 }
             }
@@ -68,7 +66,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
                 ViewBag.notification = Notification.Error("LỖI", "Nội dung nhập vào không hợp lệ");
                 return View(staticElement);
             }
-            ViewBag.notification = Notification.Error("XONG", "Cập nhật thành công");
+            ViewBag.notification = Notification.Success("XONG", "Cập nhật thành công");
             return View(staticElement);
         }
     }

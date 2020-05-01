@@ -20,11 +20,9 @@ namespace MitechCenter.vn.Models
         public string cDetail { get; set; }
         public string cSchedule { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("tId")]

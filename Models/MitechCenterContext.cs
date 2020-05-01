@@ -34,6 +34,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(AboutUs).Name);
                 entity.HasIndex(e => e.auId).HasName("FK_" + typeof(AboutUs).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -42,6 +44,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(Feedback).Name);
                 entity.HasIndex(e => e.fId).HasName("FK_" + typeof(Feedback).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -50,6 +54,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(User).Name);
                 entity.HasIndex(e => e.uId).HasName("FK_" + typeof(User).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -58,6 +64,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(Teacher).Name);
                 entity.HasIndex(e => e.tId).HasName("FK_" + typeof(Teacher).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -66,6 +74,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(Course).Name);
                 entity.HasIndex(e => e.cId).HasName("FK_" + typeof(Course).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -74,6 +84,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(NewsCategory).Name);
                 entity.HasIndex(e => e.ncId).HasName("FK_" + typeof(NewsCategory).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -82,6 +94,8 @@ namespace MitechCenter.vn.Models
             {
                 entity.ToTable(typeof(News).Name);
                 entity.HasIndex(e => e.nId).HasName("FK_" + typeof(News).Name + "_Id_Index");
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });
             #endregion
 
@@ -92,6 +106,10 @@ namespace MitechCenter.vn.Models
                 entity.ToTable(typeof(StaticElement).Name);
                 // Khởi tạo Index
                 entity.HasIndex(e => e.eId).HasName("FK_ElementTbl_Id_Index");
+                entity.HasIndex(e => e.eKey).HasName("FK_ElementTbl_Key_Index").IsUnique();
+                // Default value
+                entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
+                entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
                 // Khởi tạo dữ liệu ban đầu
                 using (StreamReader r = File.OpenText("./statics/staticElements.json"))
                 {
@@ -110,3 +128,5 @@ namespace MitechCenter.vn.Models
         }
     }
 }
+
+// dotnet ef migrations add MyFirstMigration

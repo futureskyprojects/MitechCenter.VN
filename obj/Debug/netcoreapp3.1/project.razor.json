@@ -20521,6 +20521,11 @@
   "RootNamespace": "MitechCenter.vn",
   "Documents": [
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\NewsCategory\\Delete.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\NewsCategory\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\DecideToEstablish\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\DecideToEstablish\\Index.cshtml",
       "FileKind": "mvc"
@@ -20586,8 +20591,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\NewsCategory\\Update.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\NewsCategory\\Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\NewsCategory\\Create.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\NewsCategory\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Home\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Create.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\News\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

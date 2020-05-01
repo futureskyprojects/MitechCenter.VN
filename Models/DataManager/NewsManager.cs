@@ -29,6 +29,11 @@ namespace MitechCenter.vn.Models.DataManager
             return _context.TheNews.FirstOrDefault(e => e.nId == id);
         }
 
+        public IEnumerable<News> GetAll(long ncId)
+        {
+            return _context.TheNews.Where(x => x.ncId == ncId).ToList();
+        }
+
         public News Get(string key)
         {
             throw new System.NotImplementedException();

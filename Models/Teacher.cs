@@ -14,12 +14,10 @@ namespace MitechCenter.vn.Models
         public int tId { get; set; }
         public string tDisplayName { get; set; }
         public string tAvatar { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; } = DateTime.Now;
+
+        public DateTime? createAt { get; set; } = DateTime.Now;
+
+        public DateTime? updateAt { get; set; } = DateTime.Now;
 
         public ICollection<Course> Courses { get; set; }
 

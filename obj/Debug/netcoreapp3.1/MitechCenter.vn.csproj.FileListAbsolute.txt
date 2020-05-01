@@ -91,3 +91,7 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Embed\Index.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\ServiceMotto\Index.cshtml.g.cs
 F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\statics\staticElements.json
 F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\Create.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\Update.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\Delete.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Create.cshtml.g.cs

@@ -17,7 +17,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
         public IActionResult Index()
         {
             StaticElement staticElement = _context.Get(StaticElementKey.CAROUSEL);
-            return View();
+            return View(staticElement);
         }
     }
 }

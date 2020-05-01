@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MitechCenter.vn.Models.Repository;
+using Newtonsoft.Json;
 
 namespace MitechCenter.vn.Models.DataManager
 {
@@ -41,6 +43,7 @@ namespace MitechCenter.vn.Models.DataManager
 
         public void Update(StaticElement dbEntity, StaticElement entity)
         {
+            Console.WriteLine(JsonConvert.SerializeObject(entity));
             dbEntity.DeepCopy(entity);
             _context.SaveChanges();
         }

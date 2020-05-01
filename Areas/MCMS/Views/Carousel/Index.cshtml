@@ -1,63 +1,87 @@
-﻿@{
-	ViewData["Title"] = "SỞ HỮU";
+﻿@using MitechCenter.vn.Models;
+@model StaticElement
+@{
+	ViewData["Title"] = "CAROUSEL";
 }
-<div class="main-wrapper">
-	<!-- ============================================================== -->
-	<!-- Preloader - style you can find in spinners.css -->
-	<!-- ============================================================== -->
-	<div class="preloader">
-		<div class="lds-ripple">
-			<div class="lds-pos"></div>
-			<div class="lds-pos"></div>
-		</div>
-	</div>
-	<!-- ============================================================== -->
-	<!-- Preloader - style you can find in spinners.css -->
-	<!-- ============================================================== -->
-	<!-- ============================================================== -->
-	<!-- Login box.scss -->
-	<!-- ============================================================== -->
-	<div class="auth-wrapper d-flex no-block justify-content-center align-items-center position-relative"
-		style="background:url(assets/images/big/auth-bg.jpg) no-repeat center center;">
-		<div class="auth-box row">
-			<div class="col-lg-7 col-md-5 modal-bg-img" style="background-image: url(assets/images/big/LoginPanel.png);">
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<div class="page-breadcrumb">
+	<div class="row">
+		<div class="col-7 align-self-center">
+			<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Carousel</h4>
+			<div class="d-flex align-items-center">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb m-0 p-0">
+						<li class="breadcrumb-item"><a href="index.html" class="text-muted">MCMS</a></li>
+						<li class="breadcrumb-item text-muted active" aria-current="page">Trang chủ</li>
+					</ol>
+				</nav>
 			</div>
-			<div class="col-lg-5 col-md-7 bg-white">
-				<div class="p-3">
-					@* <div class="text-center">
-						<img src="assets/images/big/icon.png" alt="wrapkit">
-					</div> *@
-					<h2 class="mt-3 text-center">ĐĂNG NHẬP</h2>
-					<p class="text-center" style="font-size: 12px;">Nhập tài khoản và mật khẩu của bạn để truy cập trang quản trị.</p>
-					<form class="mt-4">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="form-group">
-									<label class="text-dark" for="uname">Tên đăng nhập</label>
-									<input class="form-control" id="uname" type="text"
-										placeholder="Nhập tên đăng nhập">
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="form-group">
-									<label class="text-dark" for="pwd">Mật khẩu</label>
-									<input class="form-control" id="pwd" type="password"
-										placeholder="Nhập mật khẩu">
-								</div>
-							</div>
-							<div class="col-lg-12 text-center">
-								<button type="submit" class="btn btn-block btn-dark">Đăng nhập</button>
-							</div>
-							@* <div class="col-lg-12 text-center mt-5">
-								Don't have an account? <a href="#" class="text-danger">Sign Up</a>
-							</div> *@
+		</div>
+		@* <div class="col-5 align-self-center">
+			<div class="customize-input float-right">
+				<select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+					<option selected>Aug 19</option>
+					<option value="1">July 19</option>
+					<option value="2">Jun 19</option>
+				</select>
+			</div>
+		</div> *@
+	</div>
+</div>
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+
+ <!-- ============================================================== -->
+<!-- Container fluid  -->
+<!-- ============================================================== -->
+<div class="container-fluid">
+	<!-- ============================================================== -->
+	<!-- Start Page Content -->
+	<!-- ============================================================== -->
+	<div class="card">
+		<div class="card-body">
+			<h4 class="card-title">CAROUSEL 1</h4>
+			<form method="post">
+				<div class="form-group">
+					<input asp-for="eKey" style="display:none"/>
+					<input asp-for="eDescription" style="display:none"/>
+					<h4 class="card-title mt-3">Nội dung tiêu đề</h4>
+					<input type="text" class="form-control" id="prenametext" placeholder="Tiêu đề carousel">
+					<h4 class="card-title mt-3">Nội dung văn bản nhỏ</h4>
+					<textarea asp-for="eData" class="form-control" rows="3" placeholder="Nhập tại đây...">@Model.eData</textarea>
+					<h4 class="card-title mt-3">Link ảnh sản phẩm</h4>
+					<input type="text" class="form-control" id="prenametext" placeholder="Link ảnh sản phẩm">
+					<h4 class="card-title mt-3">Link ảnh nền</h4>
+					<input type="text" class="form-control" id="prenametext" placeholder="Link ảnh nền">
+					<h4 class="card-title mt-3">Nút bấm</h4>
+					<div class="row">
+						<div class="col-6">
+							<input type="text" class="form-control" id="prenametext" placeholder="Chữ trong nút">
 						</div>
-					</form>
+						<div class="col-6">
+							<input type="text" class="form-control" id="prenametext" placeholder="Link của nút">
+						</div>
+					</div>
 				</div>
-			</div>
+				<button type="submit" class="btn btn-block btn-rounded btn-success">CẬP NHẬT</button>
+				@Html.Raw(ViewBag.notification)
+			</form>
 		</div>
 	</div>
 	<!-- ============================================================== -->
-	<!-- Login box.scss -->
+	<!-- End PAge Content -->
+	<!-- ============================================================== -->
+	<!-- ============================================================== -->
+	<!-- Right sidebar -->
+	<!-- ============================================================== -->
+	<!-- .right-sidebar -->
+	<!-- ============================================================== -->
+	<!-- End Right sidebar -->
 	<!-- ============================================================== -->
 </div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->

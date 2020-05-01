@@ -19,11 +19,9 @@ namespace MitechCenter.vn.Models
         public string nContent { get; set; }
         public string nTags { get; set; }
         public string nFeatureImage { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? updateAt { get; set; } = DateTime.Now;
         
         [ForeignKey("ncId")]

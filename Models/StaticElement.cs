@@ -20,7 +20,7 @@ namespace MitechCenter.vn.Models
             this.createAt = DateTime.Now;
             this.updateAt = DateTime.Now;
         }
-        public StaticElement(int eId, string eKey, string eData, string eDescription, DateTime createAt, DateTime updateAt)
+        public StaticElement(int eId, string eKey, string eData, string eDescription, DateTime? createAt, DateTime? updateAt)
         {
             this.eId = eId;
             this.eKey = eKey;
@@ -37,13 +37,9 @@ namespace MitechCenter.vn.Models
         public string eData { get; set; }
 
         public string eDescription { get; set; }
+        public DateTime? createAt { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime createAt { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime updateAt { get; set; }
+        public DateTime? updateAt { get; set; }
         public void DeepCopy(StaticElement staticElement)
         {
             this.eId = staticElement.eId;

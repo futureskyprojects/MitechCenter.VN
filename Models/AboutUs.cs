@@ -18,11 +18,9 @@ namespace MitechCenter.vn.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DefaultValue(false)]
         public bool isServices { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("uId")]

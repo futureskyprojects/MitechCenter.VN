@@ -18,11 +18,9 @@ namespace MitechCenter.vn.Models
         public string fEmail { get; set; }
         public string fContent { get; set; }
         public int? fReplyByUserId { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? updateAt { get; set; } = DateTime.Now;
 
         [ForeignKey("fReplyByUserId")]

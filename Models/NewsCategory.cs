@@ -14,12 +14,10 @@ namespace MitechCenter.vn.Models
         public int ncId { get; set; }
         public string ncName { get; set; }
         public string ncDescription { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
-        public DateTime? updateAt { get; set; } = DateTime.Now;
+
+        public DateTime? createAt { get; set; }
+
+        public DateTime? updateAt { get; set; }
 
         public ICollection<News> News { get; set; }
         public void DeepCopy(NewsCategory newsCategory)

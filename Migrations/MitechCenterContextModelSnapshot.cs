@@ -32,16 +32,22 @@ namespace MitechCenter.vn.Migrations
                     b.Property<string>("auTitle")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("createAt")
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<bool>("isServices")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                        .HasColumnType("bit");
 
                     b.Property<int>("uId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("auId");
 
@@ -78,16 +84,18 @@ namespace MitechCenter.vn.Migrations
                     b.Property<string>("cSchedule")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("tId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("cId");
 
@@ -106,9 +114,10 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("fAddress")
                         .HasColumnType("nvarchar(max)");
@@ -128,9 +137,10 @@ namespace MitechCenter.vn.Migrations
                     b.Property<int?>("fReplyByUserId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("fId");
 
@@ -149,9 +159,10 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("nContent")
                         .HasColumnType("nvarchar(max)");
@@ -174,9 +185,10 @@ namespace MitechCenter.vn.Migrations
                     b.Property<int>("uId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("nId");
 
@@ -197,9 +209,10 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("ncDescription")
                         .HasColumnType("nvarchar(max)");
@@ -207,9 +220,10 @@ namespace MitechCenter.vn.Migrations
                     b.Property<string>("ncName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("ncId");
 
@@ -226,9 +240,10 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("eData")
                         .HasColumnType("nvarchar(max)");
@@ -237,18 +252,125 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("eKey")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("eId");
 
                     b.HasIndex("eId")
                         .HasName("FK_ElementTbl_Id_Index");
 
+                    b.HasIndex("eKey")
+                        .IsUnique()
+                        .HasName("FK_ElementTbl_Key_Index")
+                        .HasFilter("[eKey] IS NOT NULL");
+
                     b.ToTable("StaticElement");
+
+                    b.HasData(
+                        new
+                        {
+                            eId = 1,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 447, DateTimeKind.Local).AddTicks(3043),
+                            eData = "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc",
+                            eDescription = "",
+                            eKey = "OWNER",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(4495)
+                        },
+                        new
+                        {
+                            eId = 2,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5122),
+                            eData = "assets/images/logo-icon.png",
+                            eDescription = "",
+                            eKey = "LOGO",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5144)
+                        },
+                        new
+                        {
+                            eId = 3,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5157),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "CAROUSEL",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5159)
+                        },
+                        new
+                        {
+                            eId = 4,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5161),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "DEVELOPMENT_MOTTO",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5163)
+                        },
+                        new
+                        {
+                            eId = 5,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5164),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "SERIVE_MOTTO",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5166)
+                        },
+                        new
+                        {
+                            eId = 6,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5167),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "PARTNER",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5169)
+                        },
+                        new
+                        {
+                            eId = 7,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5171),
+                            eData = "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.",
+                            eDescription = "",
+                            eKey = "DECIDE_TO_ESTABLISH",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5172)
+                        },
+                        new
+                        {
+                            eId = 8,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5174),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "CONTACT_INFO",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5175)
+                        },
+                        new
+                        {
+                            eId = 9,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5177),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "EMBED",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5178)
+                        },
+                        new
+                        {
+                            eId = 10,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5180),
+                            eData = "Copyright © Trung Tâm CNTT & NN Đại học Thông Tin Liên Lạc",
+                            eDescription = "",
+                            eKey = "COPY_RIGHT",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5181)
+                        },
+                        new
+                        {
+                            eId = 11,
+                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5184),
+                            eData = "",
+                            eDescription = "",
+                            eKey = "EDUCATION_PROGRAM",
+                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5185)
+                        });
                 });
 
             modelBuilder.Entity("MitechCenter.vn.Models.Teacher", b =>
@@ -258,9 +380,10 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("tAvatar")
                         .HasColumnType("nvarchar(max)");
@@ -268,9 +391,10 @@ namespace MitechCenter.vn.Migrations
                     b.Property<string>("tDisplayName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.HasKey("tId");
 
@@ -287,12 +411,16 @@ namespace MitechCenter.vn.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("UseruId")
+                        .HasColumnType("int");
+
                     b.Property<string>("avatar")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("createAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("createAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("displayName")
                         .HasColumnType("nvarchar(max)");
@@ -303,14 +431,17 @@ namespace MitechCenter.vn.Migrations
                     b.Property<int>("role")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("updateAt")
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("updateAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<string>("username")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("uId");
+
+                    b.HasIndex("UseruId");
 
                     b.HasIndex("uId")
                         .HasName("FK_User_Id_Index");
@@ -321,7 +452,7 @@ namespace MitechCenter.vn.Migrations
             modelBuilder.Entity("MitechCenter.vn.Models.AboutUs", b =>
                 {
                     b.HasOne("MitechCenter.vn.Models.User", "User")
-                        .WithMany("AboutUs")
+                        .WithMany()
                         .HasForeignKey("uId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -356,6 +487,13 @@ namespace MitechCenter.vn.Migrations
                         .HasForeignKey("uId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MitechCenter.vn.Models.User", b =>
+                {
+                    b.HasOne("MitechCenter.vn.Models.User", null)
+                        .WithMany("AboutUs")
+                        .HasForeignKey("UseruId");
                 });
 #pragma warning restore 612, 618
         }

@@ -46,6 +46,10 @@
 			<h4 class="card-title">Tên của tổ chức hoặc cá nhân sở hữu website này</h4>
 			<form method="post">
 				<div class="form-group">
+					@Html.HiddenFor(x=>x.eKey)
+					@Html.HiddenFor(x=>x.eDescription)
+					@Html.HiddenFor(x=>x.createAt)
+					@Html.HiddenFor(x=>x.updateAt)										
 					<textarea asp-for="eData" class="form-control" rows="3" placeholder="Nhập tại đây...">@Model.eData</textarea>
 					<small id="textHelp" class="form-text text-muted">Tips: Nhập ngắn gọn tên của tổ chức hoặc cá nhân</small>
 				</div>

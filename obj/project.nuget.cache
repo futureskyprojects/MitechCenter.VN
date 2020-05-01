@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ut6ZhMJzi6y2K1zuFIbbhIXg8LI9hARSmjNyi67g28+ual7Wmirro7MCnobsWcjAAs06VwgYna0RmDbCF2HSsw==",
+  "dgSpecHash": "oepvxNSSJYFOCJ9D9lWqO5++AVAK2ys9e7llyYY4j8l/VFa+bpTb1AwU/GYALawFd+haAT6Gclk8GQY8Nk9XNA==",
   "success": true,
   "projectFilePath": "F:\\MitechCenter.vn\\MitechCenter.vn.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\proje\\.nuget\\packages\\ckeditor-full\\4.14.0\\ckeditor-full.4.14.0.nupkg.sha512",
     "C:\\Users\\proje\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\proje\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\proje\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

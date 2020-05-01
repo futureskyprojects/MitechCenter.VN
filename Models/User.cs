@@ -17,11 +17,9 @@ namespace MitechCenter.vn.Models
         public string displayName { get; set; }
         public string avatar { get; set; }
         public int role { get; set; }
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? createAt { get; set; } = DateTime.Now;
-        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
-        [DefaultValue("GETDATE()")]
+
         public DateTime? updateAt { get; set; } = DateTime.Now;
 
         public ICollection<User> AboutUs { get; set; }
