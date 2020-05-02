@@ -18,7 +18,6 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.TagHelpers.input.cach
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.TagHelpers.output.cache
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\MitechCenter.vn.RazorCoreGenerate.cache
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -95,3 +94,5 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\C
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\Update.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\Delete.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Create.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Update.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Delete.cshtml.g.cs

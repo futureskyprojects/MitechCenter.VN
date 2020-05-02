@@ -1,62 +1,61 @@
-﻿@model HomeViewModel
+﻿@using MitechCenter.vn.Models
+@model IEnumerable<News>
 
 @{
     Layout="~/Views/Shared/_MetaLayout.cshtml";
-    ViewData["Title"] = @Model.title;
-    ViewData["SuperTitle"] = @Model.superTitle;
-    ViewData["HeaderCompanyOwner"] = @Model.headerCompanyOwner;
+    ViewData["Title"] = "TRANG CHỦ";
 }
 
 <!-- banner part start-->
 <section class="banner_part">
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background: #000;">
+            <div class="carousel-item active" style="background: url('./img/bg_1.png');background-position: center;background-repeat: no-repeat;background-size: cover;">
                 <div class="mask flex-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-md-7 col-12 order-md-1 order-2">
-                                <h4>Present your <br>
-                                    awesome product</h4>
-                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
-                                    necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                                <a href="#">BUY NOW</a>
+                                <h4>Cùng nhau phát triển<br/>
+                                    Tận tâm với khách hàng</h4>
+                                <p>Sự phát triển của bạn<br>
+                                   Chính là sự phát triển của chúng tôi sau này.</p>
+                                <a href="#">XEM THÊM</a>
                             </div>
-                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://i.imgur.com/NKvkfTT.png"
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/ly-do-xay-dung-trang-web.png"
                                     class="mx-auto" alt="slide"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item"  style="background: url('./img/bg_2.png');background-position: center;background-repeat: no-repeat;background-size: cover;">
                 <div class="mask flex-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-md-7 col-12 order-md-1 order-2">
-                                <h4>Present your <br>
-                                    awesome product</h4>
-                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
-                                    necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                                <a href="#">BUY NOW</a>
+                                <h4>Đội ngũ chuyên nghiệp<br>
+                                    trong lĩnh vực</h4>
+                                <p>Chúng tôi yêu thích công việc<br>
+                                    và luôn dành hết tâm huyết cho chúng.</p>
+                                <a href="#">XEM THÊM</a>
                             </div>
-                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://i.imgur.com/duWgXRs.png"
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/bg_ok.png"
                                     class="mx-auto" alt="slide"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" style="background: url('https://avalonsolution.asia/themes/AvalonSolution/images/home-slider/slider-3.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
                 <div class="mask flex-center">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-md-7 col-12 order-md-1 order-2">
-                                <h4>Present your <br>
-                                    awesome product</h4>
-                                <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
-                                    necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                                <a href="#">BUY NOW</a>
+                                <h4>Dịch vụ hậu mãi tuyệt vời <br>
+                                    luôn quan tâm đến khách hàng.</h4>
+                                <p>Đối với chúng tôi, trải nghiệm của bạn là mục tiêu đáng trân quý<br>
+                                    mà chúng tôi phải hướng đến và phục vụ tốt nhất.</p>
+                                <a href="#">XEM THÊM</a>
                             </div>
-                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="https://i.imgur.com/DGkR4OQ.png"
+                            <div class="col-md-5 col-12 order-md-2 order-1"><img src="./img/woman_transparent.png"
                                     class="mx-auto" alt="slide"></div>
                         </div>
                     </div>
@@ -237,48 +236,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-lg-4 col-xl-4">
-                <div class="single-home-blog">
-                    <div class="card">
-                        <img src="img/blog/blog_1.png" class="card-img-top" alt="blog">
-                        <div class="card-body">
-                            <a href="#" class="btn_4">Design</a>
-                            <a href="blog.html">
-                                <h5 class="card-title">Dry beginning sea over tree</h5>
-                            </a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+            @foreach (var news in Model)
+            {
+                <div class="col-sm-6 col-lg-4 col-xl-4">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <div class="card-img-top" style="background: url(@news.nFeatureImage);background-position: center;background-repeat: no-repeat;background-size: cover;"></div>
+                            <div class="card-body">
+                                <a href="#" class="btn_4">@news.getCategoryName(ViewBag.ncs)</a>
+                                <a href="blog.html">
+                                    <h5 class="card-title text-line">@news.nTitle</h5>
+                                </a>
+                                <p class="text-line">@news.nDescription</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-4">
-                <div class="single-home-blog">
-                    <div class="card">
-                        <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
-                        <div class="card-body">
-                            <a href="#" class="btn_4">Developing</a>
-                            <a href="blog.html">
-                                <h5 class="card-title">All beginning air two likeness</h5>
-                            </a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-4">
-                <div class="single-home-blog">
-                    <div class="card">
-                        <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
-                        <div class="card-body">
-                            <a href="#" class="btn_4">Design</a>
-                            <a href="blog.html">
-                                <h5 class="card-title">Form day seasons sea hand</h5>
-                            </a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div>                
+            }
         </div>
     </div>
 </section>
@@ -291,30 +265,12 @@
              <div class="col">
                  <div class="brands_slider_container">
                      <div class="owl-carousel owl-theme brands_slider">
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT1.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT2.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT3.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT4.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT1.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT2.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT4.jpg" alt=""></div>
-                         </div>
-                         <div class="owl-item">
-                             <div class="brands_item d-flex flex-column justify-content-center"><img src="https://mitechcenter.vn/default/images/DT4.jpg" alt=""></div>
-                         </div>
+                         @foreach (Partners partner in ViewBag.partners)
+                         {
+                            <div class="owl-item">
+                                <div class="brands_item d-flex flex-column justify-content-center"><img src="@partner.logo" alt="" height="130"></div>
+                            </div>   
+                         }
                      </div> <!-- Brands Slider Navigation -->
                      <div class="brands_nav brands_prev"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA9UlEQVRIie3WMUpDQRAG4A9BrOwEwSqFB7CxtEplq43ewXgJ4yGs9Ao5gGIjqHiGQAKpxE4EUfIsnoG3q6CoOw8hP2y7H7Pszg7z/JMs4wbV+7qIQBcwaKAV7iLg4wx9wHppdBfTBvqCbml0A4/Sag9Ko6sYZ+hpaXQRlxl6haXS8EmGjtQnUDSHGfqEzdJoV31rZ+gUe6XRDu6l1R6VRuE2QwfqjvXrfLVJ9RfIT9Lx8aj7UfgWnqWXaz8K72nhOc2SN5AJ1iLg1lomrGCY4WcRMJ9/i70ofEc6CLxiOwrvS6sOGX1ocdijHm+vG/B5FDzPt/MGfj9nuL2xU0gAAAAASUVORK5CYII="/></div>
                      <div class="brands_nav brands_next"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAA70lEQVRIie3WMUpDQRAG4I+AWNkJglWKHMBCS6tUabUxd0i8hPEQVnoFD6DYBAx4BkEhldhJQAyJxVPYt1oIsvMU8sOWy8cus7PDKn8s11h+rAk2ouC7BF7iEq0IuI2nDB9FwLCP1wReoB+FD9VPPcNeFH6W4VNsR8BruMnwMdYj8E3cZ/hFBAw7eMnwYRR+oKruT3iOXhQ+Uj/1MzoRcEvVyVJ88pNN/zanGrjqQ/XiekO3NPrdcxqURrfwmKHnpdHGWmb+STyobqBojjN0ht3SaFdVtekgcFQabfs6+pyURmlw2LtK0FuB4+0qv8473Ftmt3eUiIwAAAAASUVORK5CYII="/></div>
@@ -328,6 +284,22 @@
 @section styles {
     <link rel="stylesheet" href="css/carousel.css"/>
     <link rel="stylesheet" href="css/clients-brand.css"/>
+    <style>
+        #myCarousel .carousel-item h4 {
+            line-height: 1.2;
+            color: #3e7cc2;
+        }
+        #myCarousel .carousel-item p {
+            color:#174560;
+        }
+        .text-line {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+    </style>
 }
 
 @section scripts {
@@ -346,7 +318,7 @@
                     nav: false,
                     dots: false,
                     autoWidth: true,
-                    items: 8,
+                    items: '@ViewBag.partners.Count',
                     margin: 42
                 });
 

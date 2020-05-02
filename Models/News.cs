@@ -23,7 +23,7 @@ namespace MitechCenter.vn.Models
         public DateTime? createAt { get; set; } = DateTime.Now;
 
         public DateTime? updateAt { get; set; } = DateTime.Now;
-        
+
         [ForeignKey("ncId")]
         public virtual NewsCategory NewsCategory { get; set; }
 
@@ -42,6 +42,16 @@ namespace MitechCenter.vn.Models
             this.nFeatureImage = news.nFeatureImage;
             this.createAt = news.createAt;
             this.updateAt = news.updateAt;
+        }
+
+        public string getCategoryName(IEnumerable<NewsCategory> ns)
+        {
+            foreach (var newsCategory in ns)
+            {
+                if (this.ncId == newsCategory.ncId)
+                    return newsCategory.ncName;
+            }
+            return "Không xác định";
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@using MitechCenter.vn.Models;
 @model News
 @{
-	ViewData["Title"] = "TẠO MỚI TIN BÀI";
+	ViewData["Title"] = "SỬA TIN BÀI";
 }
 <!-- ============================================================== -->
 <!-- Bread crumb and right sidebar toggle -->
@@ -9,7 +9,7 @@
 <div class="page-breadcrumb">
 	<div class="row">
 		<div class="col-7 align-self-center">
-			<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Viết bài</h4>
+			<h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Sửa bài</h4>
 			<div class="d-flex align-items-center">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb m-0 p-0">
@@ -21,7 +21,7 @@
 		</div>
 		<div class="col-5 align-self-center">
 			<div class="customize-input float-right">
-				@* <button type="button" class="btn waves-effect waves-light btn-danger btn-rounded px-5" onclick="window.history.back()">Hủy</button> *@
+				<button type="button" class="btn waves-effect waves-light btn-danger btn-rounded px-5" onclick="window.history.back()">Hủy</button>
 			</div>
 		</div>
 	</div>
@@ -41,8 +41,11 @@
 		<div class="col-12">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">THÊM MỚI TIN BÀI</h4>
+					<h4 class="card-title">CHỈNH SỬA TIN BÀI</h4>
 					<form method="post">
+						@Html.HiddenFor(x=>x.nId);
+						@Html.HiddenFor(x=>x.createAt);
+						@Html.HiddenFor(x=>x.updateAt);												
 						<h4 class="card-title mt-3">Tiêu đề</h4>
 						<input asp-for="nTitle" type="text" class="form-control" id="prenametext" placeholder="Tiêu đề">
 						<h4 class="card-title mt-3">Nội dung</h4>
@@ -60,7 +63,7 @@
 							<select class="custom-select" asp-for="ncId" asp-items="@ViewBag.newsCategories">
 							</select>
 						</div>
-						<button type="submit" class="btn btn-block btn-rounded btn-success mt-5">THÊM MỚI</button>
+						<button type="submit" class="btn btn-block btn-rounded btn-success mt-5">CẬP NHẬT</button>
 						@Html.Raw(ViewBag.notification)
 					</form>
 				</div>

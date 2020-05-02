@@ -74,8 +74,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                var newsCategoryDb = _context.Get(newsCategory.ncId);
-                _context.Delete(newsCategoryDb);
+                _context.Delete(newsCategory);
                 return RedirectToAction(nameof(Index));
             }
             ViewBag.notification = Notification.Error("LỖI", "Dữ liệu nhập vào không hợp lệ");

@@ -34,6 +34,11 @@ namespace MitechCenter.vn.Models.DataManager
             return _context.TheNews.Where(x => x.ncId == ncId).ToList();
         }
 
+        public IEnumerable<News> GetSize(int size)
+        {
+            return _context.TheNews.Take(size).ToList();
+        }
+
         public News Get(string key)
         {
             throw new System.NotImplementedException();

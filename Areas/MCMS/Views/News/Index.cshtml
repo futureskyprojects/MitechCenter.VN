@@ -61,12 +61,14 @@
 									News news = Model.ElementAt(i);
 									<tr>
 									<td class="text-center">@(i+1)</td>
-									<td>@news.nFeatureImage</td>
+									<td>
+										<img src="@news.nFeatureImage" style="max-width: 150px; max-height: 150px;"/>
+									</td>
 									<td>@news.nTitle</td>
 									<td>@news.nDescription</td>
 									<td class="text-center">
-										<a type="button" class="btn waves-effect waves-light btn-primary" href="NewsCategory/Update/@news.nId">Sửa</a>										
-										<a type="button" class="btn waves-effect waves-light btn-danger" href="NewsCategory/Delete/@news.nId">Xóa</a>
+										<a type="button" class="btn waves-effect waves-light btn-primary" href="News/Update/@news.nId">Sửa</a>										
+										<a type="button" class="btn waves-effect waves-light btn-danger" href="News/Delete/@news.nId">Xóa</a>
 									</td>
 									</tr>
 								}

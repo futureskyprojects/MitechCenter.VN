@@ -20626,6 +20626,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Delete.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\News\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Partner\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Partner\\Index.cshtml",
       "FileKind": "mvc"
@@ -20671,13 +20676,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Logo\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Logo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Logo\\Index.cshtml",
-      "TargetPath": "Areas\\MCMS\\Views\\Logo\\Index.cshtml",
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Update.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\News\\Update.cshtml",
       "FileKind": "mvc"
     },
     {
