@@ -34,6 +34,21 @@ namespace MitechCenter.vn.Models.DataManager
             return _context.TheNews.Where(x => x.ncId == ncId).ToList();
         }
 
+        public News getPreviousPost(long currentPostId)
+        {
+            return _context.TheNews
+            .Where(x => x.nId < currentPostId)
+            .OrderByDescending(x => x.nId)
+            .First();
+        }
+        public News getNextPost(long currentPostId)
+        {
+            return _context.TheNews
+            .Where(x => x.nId > currentPostId)
+            .OrderBy(x => x.nId)
+            .First();
+        }
+
         public IEnumerable<News> GetSize(int size)
         {
             return _context.TheNews.Take(size).ToList();

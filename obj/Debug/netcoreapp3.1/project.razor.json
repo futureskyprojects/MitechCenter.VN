@@ -20681,6 +20681,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Views\\Post\\Index.cshtml",
+      "TargetPath": "Views\\Post\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Update.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\News\\Update.cshtml",
       "FileKind": "mvc"

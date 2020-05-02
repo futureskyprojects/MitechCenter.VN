@@ -96,3 +96,4 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\NewsCategory\D
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Create.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Update.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\News\Delete.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs

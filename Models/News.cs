@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+using MitechCenter.vn.Utils;
 
 namespace MitechCenter.vn.Models
 {
@@ -52,6 +51,11 @@ namespace MitechCenter.vn.Models
                     return newsCategory.ncName;
             }
             return "Không xác định";
+        }
+
+        public string getPath()
+        {
+            return $"{nTitle.NonUnicode().Replace(" ", "-")}-{nId.ToString()}";
         }
     }
 }
