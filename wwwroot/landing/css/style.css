@@ -8,9 +8,10 @@
 }
 
 .member_counter {
-    background-image: -moz-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
-    background-image: -webkit-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
-    background-image: -ms-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
+    background-image: linear-gradient(to left, #00B4DB, #0083B0);
+    background-image: -moz-linear-gradient(to left, #00B4DB, #0083B0);
+    background-image: -webkit-linear-gradient(to left, #00B4DB, #0083B0);
+    background-image: -ms-linear-gradient(to left, #00B4DB, #0083B0);
 }
 
 body {

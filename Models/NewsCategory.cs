@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MitechCenter.vn.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -27,6 +28,11 @@ namespace MitechCenter.vn.Models
             this.ncDescription = newsCategory.ncDescription;
             this.createAt = newsCategory.createAt;
             this.updateAt = newsCategory.updateAt;
+        }
+
+        public string getPath()
+        {
+            return $"{ncName.NonUnicode().Replace(" ", "-")}-{ncId}";
         }
     }
 }

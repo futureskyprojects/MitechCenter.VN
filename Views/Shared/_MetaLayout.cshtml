@@ -1,11 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="~/landing/"/>
+    <base href="~/landing/" />
     <title>@ViewData["Title"] | MITECHCENTER.VN</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
@@ -41,40 +41,18 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo" height="47"> </a>
+                        <a class="navbar-brand" href="/"> <img src="img/logo.png" alt="logo" height="47"> </a>
                         <button class="navbar-toggler trans" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
                         <div class="collapse navbar-collapse main-menu-item justify-content-end"
-                            id="navbarSupportedContent">
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="/">Trang Chủ</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">Giới thiệu</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Tin tức
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Tin tức - Sự kiện</a>
-                                        <a class="dropdown-item" href="elements.html">Chia sẻ kiến thức</a>
-                                        <a class="dropdown-item" href="elements.html">Công nghệ thông tin</a>
-                                        <a class="dropdown-item" href="elements.html">TIẾNG ANH</a>
-                                    </div>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cource.html">Khóa học</a>
-                                </li>
-                                <li class="d-none d-lg-block">
-                                    <a class="btn_1" href="#">Liên hệ</a>
-                                </li>
-                            </ul>
+                             id="navbarSupportedContent">
+                            @{ 
+                                @await Component.InvokeAsync("HeaderMenu");
+                            }
                         </div>
                     </nav>
                 </div>
@@ -134,7 +112,6 @@
         </div>
     </footer>
     <!-- footer part end-->
-
     <!-- jquery plugins here-->
     <!-- jquery -->
     <script src="js/jquery-1.12.1.min.js"></script>
@@ -158,15 +135,32 @@
     <!-- custom js -->
     <script src="js/custom.js"></script>
     @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function() {
+            var s = window.location.pathname;
+            if (s.indexOf('/Home') == 0 || s == "/")
+            {
+                $('#Home').toggleClass('active');
+            } else if (s.indexOf('/AboutUs') == 0) {
+                $('#AboutUs').addClass('active');
+            } else if (s.indexOf('/Post') == 0 || s.indexOf('/Category') == 0) {
+                $('#News').addClass('active');
+            } else if (s.indexOf('/Course') == 0) {
+                $('#Course').addClass('active');
+            }
+        });
+    </script>
 </body>
 
 <style>
     .menu_fixed .header_top {
         display: none;
     }
+
     .header_top {
         background: #0078c0;
     }
+
     .main_menu {
         -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,.12);
         box-shadow: 0 0 15px 0 rgba(0,0,0,.12);

@@ -29,15 +29,16 @@ namespace MitechCenter.vn.Controllers
                 {
                     var newsId = Int64.Parse(arrs[arrs.Length - 1]);
                     var news = _context.Get(newsId);
-                    ViewBag.newCategory = news.getCategoryName(_context_temp.GetAll());
-                    ViewBag.nextNews = ((NewsManager)_context).getNextPost(newsId);
-                    ViewBag.previousNews = ((NewsManager)_context).getPreviousPost(newsId);
+                    var newCategories = _context_temp.GetAll();
+                    ViewBag.news = ((NewsManager)_context).GetSize(5);
+                    ViewBag.newCategories = newCategories;
+                    ViewBag.nextNews = ((NewsManager)_context).getNextPost(newsId, news.ncId);
+                    ViewBag.previousNews = ((NewsManager)_context).getPreviousPost(newsId, news.ncId);
                     return View(news);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     // Không chuyển sang số được
-                    Console.WriteLine(e);
                 }
             }
             return NotFound();

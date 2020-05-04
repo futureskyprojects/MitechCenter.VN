@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using MitechCenter.vn.Models.Repository;
@@ -34,19 +35,33 @@ namespace MitechCenter.vn.Models.DataManager
             return _context.TheNews.Where(x => x.ncId == ncId).ToList();
         }
 
-        public News getPreviousPost(long currentPostId)
+        public News getPreviousPost(long currentPostId, long categoryId)
         {
-            return _context.TheNews
-            .Where(x => x.nId < currentPostId)
-            .OrderByDescending(x => x.nId)
-            .First();
+            try
+            {
+                return _context.TheNews
+                .Where(x => x.nId < currentPostId && x.ncId == categoryId)
+                .OrderByDescending(x => x.nId)
+                .First();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
-        public News getNextPost(long currentPostId)
+        public News getNextPost(long currentPostId, long categoryId)
         {
-            return _context.TheNews
-            .Where(x => x.nId > currentPostId)
-            .OrderBy(x => x.nId)
-            .First();
+            try
+            {
+                return _context.TheNews
+                .Where(x => x.nId > currentPostId && x.ncId == categoryId)
+                .OrderBy(x => x.nId)
+                .First();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         public IEnumerable<News> GetSize(int size)

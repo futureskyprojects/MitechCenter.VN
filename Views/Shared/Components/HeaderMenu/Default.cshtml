@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MitechCenter.vn.Models.NewsCategory>
+@{
+    Layout = null;
+}
+<ul class="navbar-nav align-items-center">
+    <li class="nav-item" id="Home">
+        <a class="nav-link" href="/">Trang Chủ</a>
+    </li>
+    <li class="nav-item" id="AboutUs">
+        <a class="nav-link" href="/AboutUs">Giới thiệu</a>
+    </li>
+    <li class="nav-item dropdown" id="News">
+        <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Tin tức
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @foreach (MitechCenter.vn.Models.NewsCategory newsCategory in Model)
+            {
+                <a class="dropdown-item" href="/Category/@newsCategory.getPath()">@newsCategory.ncName</a>
+            }
+        </div>
+    </li>
+    <li class="nav-item" id="Course">
+        <a class="nav-link" href="cource.html">Khóa học</a>
+    </li>
+    <li class="d-none d-lg-block">
+        <a class="btn_1" href="/Contact">Liên hệ</a>
+    </li>
+</ul>

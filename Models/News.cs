@@ -43,19 +43,43 @@ namespace MitechCenter.vn.Models
             this.updateAt = news.updateAt;
         }
 
-        public string getCategoryName(IEnumerable<NewsCategory> ns)
+        public NewsCategory getCategory(IEnumerable<NewsCategory> ns)
         {
             foreach (var newsCategory in ns)
             {
                 if (this.ncId == newsCategory.ncId)
-                    return newsCategory.ncName;
+                    return newsCategory;
             }
-            return "Không xác định";
+            return null;
         }
 
         public string getPath()
         {
             return $"{nTitle.NonUnicode().Replace(" ", "-")}-{nId.ToString()}";
+        }
+
+        public string getDate()
+        {
+            if (createAt != null)
+            {
+                return ((DateTime)createAt).ToString("dd");
+            }
+            else
+            {
+                return "--";
+            }
+        }
+
+        public string getMonth()
+        {
+            if (createAt != null)
+            {
+                return ((DateTime)createAt).ToString("MM");
+            }
+            else
+            {
+                return "--";
+            }
         }
     }
 }
