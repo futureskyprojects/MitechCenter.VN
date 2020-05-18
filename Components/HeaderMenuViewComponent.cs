@@ -17,7 +17,7 @@ namespace MitechCenter.vn.Components
             this._context = context;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             var categories = _context.GetAll();
             return View(categories);

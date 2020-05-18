@@ -17893,6 +17893,56 @@
         }
       },
       {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__OurServicesViewComponentTagHelper",
+        "AssemblyName": "MitechCenter.vn",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:our-services",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__OurServicesViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "OurServices"
+        }
+      },
+      {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__LoggedUserViewComponentTagHelper",
+        "AssemblyName": "MitechCenter.vn",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:logged-user",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__LoggedUserViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "LoggedUser"
+        }
+      },
+      {
         "Kind": "Components.Bind",
         "Name": "Bind",
         "AssemblyName": "Microsoft.AspNetCore.Components",
@@ -20581,6 +20631,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Teacher\\Create.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Teacher\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -20636,6 +20691,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Views\\Course\\Index.cshtml",
+      "TargetPath": "Views\\Course\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\NewsCategory\\Update.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\NewsCategory\\Update.cshtml",
       "FileKind": "mvc"
@@ -20646,8 +20706,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\Components\\LoggedUser\\Default.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Shared\\Components\\LoggedUser\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Course\\Update.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Course\\Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Home\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Course\\Create.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Course\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20686,6 +20761,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Teacher\\Delete.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Teacher\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Course\\Delete.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Course\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20698,6 +20783,11 @@
     {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\ContactInfo\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\ContactInfo\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Teacher\\Update.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Teacher\\Update.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20743,6 +20833,11 @@
     {
       "FilePath": "f:\\MitechCenter.vn\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Views\\Shared\\Components\\OurServices\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\OurServices\\Default.cshtml",
       "FileKind": "mvc"
     }
   ],

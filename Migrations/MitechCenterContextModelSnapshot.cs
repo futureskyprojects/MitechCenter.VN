@@ -72,6 +72,9 @@ namespace MitechCenter.vn.Migrations
                     b.Property<string>("cDetail")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("cImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("cLearningTime")
                         .HasColumnType("nvarchar(max)");
 
@@ -275,101 +278,101 @@ namespace MitechCenter.vn.Migrations
                         new
                         {
                             eId = 1,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 447, DateTimeKind.Local).AddTicks(3043),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 742, DateTimeKind.Local).AddTicks(8117),
                             eData = "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc",
                             eDescription = "",
                             eKey = "OWNER",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(4495)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 743, DateTimeKind.Local).AddTicks(9363)
                         },
                         new
                         {
                             eId = 2,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5122),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(97),
                             eData = "assets/images/logo-icon.png",
                             eDescription = "",
                             eKey = "LOGO",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5144)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(133)
                         },
                         new
                         {
                             eId = 3,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5157),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(254),
                             eData = "",
                             eDescription = "",
                             eKey = "CAROUSEL",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5159)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(257)
                         },
                         new
                         {
                             eId = 4,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5161),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(260),
                             eData = "",
                             eDescription = "",
                             eKey = "DEVELOPMENT_MOTTO",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5163)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(263)
                         },
                         new
                         {
                             eId = 5,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5164),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(265),
                             eData = "",
                             eDescription = "",
                             eKey = "SERIVE_MOTTO",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5166)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(267)
                         },
                         new
                         {
                             eId = 6,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5167),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(272),
                             eData = "",
                             eDescription = "",
                             eKey = "PARTNER",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5169)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(276)
                         },
                         new
                         {
                             eId = 7,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5171),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(277),
                             eData = "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.",
                             eDescription = "",
                             eKey = "DECIDE_TO_ESTABLISH",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5172)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(279)
                         },
                         new
                         {
                             eId = 8,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5174),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(281),
                             eData = "",
                             eDescription = "",
                             eKey = "CONTACT_INFO",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5175)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(282)
                         },
                         new
                         {
                             eId = 9,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5177),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(284),
                             eData = "",
                             eDescription = "",
                             eKey = "EMBED",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5178)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(285)
                         },
                         new
                         {
                             eId = 10,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5180),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(287),
                             eData = "Copyright © Trung Tâm CNTT & NN Đại học Thông Tin Liên Lạc",
                             eDescription = "",
                             eKey = "COPY_RIGHT",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5181)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(288)
                         },
                         new
                         {
                             eId = 11,
-                            createAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5184),
+                            createAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(291),
                             eData = "",
                             eDescription = "",
                             eKey = "EDUCATION_PROGRAM",
-                            updateAt = new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5185)
+                            updateAt = new DateTime(2020, 5, 18, 17, 18, 4, 744, DateTimeKind.Local).AddTicks(292)
                         });
                 });
 

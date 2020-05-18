@@ -77,10 +77,10 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
         }
 
 
-        public IActionResult Update(News news)
+        public IActionResult Update(long id)
         {
             ViewBag.notification = "";
-            ViewBag.newsCategories = new SelectList(_context_temp.GetAll(), "ncId", "ncName");
+            var news = _context.Get(id);
             return View(news);
         }
 

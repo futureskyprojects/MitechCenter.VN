@@ -19,6 +19,7 @@ namespace MitechCenter.vn.Models
         public string cDescription { get; set; }
         public string cDetail { get; set; }
         public string cSchedule { get; set; }
+        public string cImage { get; set; }
 
 
         public DateTime? createAt { get; set; } = DateTime.Now;
@@ -40,6 +41,7 @@ namespace MitechCenter.vn.Models
             this.cSchedule = course.cSchedule;
             this.createAt = course.createAt;
             this.updateAt = course.updateAt;
+            this.cImage = course.cImage;
         }
     }
 }
