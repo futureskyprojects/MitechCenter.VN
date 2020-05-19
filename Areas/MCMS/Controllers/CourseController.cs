@@ -7,10 +7,12 @@ using System;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using MitechCenter.vn.Areas.MCMS.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0,2")]
     public class CourseController : Controller
     {
         private readonly IDataRepository<Course> _context;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MitechCenter.vn.Models;
@@ -11,10 +12,8 @@ namespace MitechCenter.vn.Components
 {
     public class LoggedUserViewComponent : ViewComponent
     {
-        private readonly IDataRepository<User> _context;
-        public LoggedUserViewComponent(IDataRepository<User> context)
+        public LoggedUserViewComponent()
         {
-            this._context = context;
         }
 
         public IViewComponentResult Invoke()

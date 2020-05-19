@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Http;
 using System.IO;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0")]
     public class LogoController : Controller
     {
         private readonly IDataRepository<StaticElement> _context;

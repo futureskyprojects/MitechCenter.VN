@@ -17869,6 +17869,56 @@
       },
       {
         "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__LoggedUserViewComponentTagHelper",
+        "AssemblyName": "MitechCenter.vn",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:logged-user",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__LoggedUserViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "LoggedUser"
+        }
+      },
+      {
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__RoleMenuViewComponentTagHelper",
+        "AssemblyName": "MitechCenter.vn",
+        "Documentation": null,
+        "TagOutputHint": null,
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:role-menu",
+            "ParentTag": null,
+            "TagStructure": 0,
+            "Attributes": [],
+            "Diagnostics": []
+          }
+        ],
+        "BoundAttributes": [],
+        "AllowedChildTags": [],
+        "Diagnostics": [],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__RoleMenuViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "RoleMenu"
+        }
+      },
+      {
+        "Kind": "MVC.ViewComponent",
         "Name": "__Generated__HeaderMenuViewComponentTagHelper",
         "AssemblyName": "MitechCenter.vn",
         "Documentation": null,
@@ -17915,31 +17965,6 @@
           "Runtime.Name": "ITagHelper",
           "Common.TypeName": "__Generated__OurServicesViewComponentTagHelper",
           "MVC.ViewComponent.Name": "OurServices"
-        }
-      },
-      {
-        "Kind": "MVC.ViewComponent",
-        "Name": "__Generated__LoggedUserViewComponentTagHelper",
-        "AssemblyName": "MitechCenter.vn",
-        "Documentation": null,
-        "TagOutputHint": null,
-        "CaseSensitive": false,
-        "TagMatchingRules": [
-          {
-            "TagName": "vc:logged-user",
-            "ParentTag": null,
-            "TagStructure": 0,
-            "Attributes": [],
-            "Diagnostics": []
-          }
-        ],
-        "BoundAttributes": [],
-        "AllowedChildTags": [],
-        "Diagnostics": [],
-        "Metadata": {
-          "Runtime.Name": "ITagHelper",
-          "Common.TypeName": "__Generated__LoggedUserViewComponentTagHelper",
-          "MVC.ViewComponent.Name": "LoggedUser"
         }
       },
       {
@@ -20676,6 +20701,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Shared\\Components\\RoleMenu\\Default.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\Shared\\Components\\RoleMenu\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Login\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Login\\Index.cshtml",
       "FileKind": "mvc"
@@ -20721,13 +20751,28 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\User\\Create.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\User\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Course\\Create.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Course\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\User\\Delete.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\User\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\News\\Create.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\News\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\User\\Index.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\User\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20738,6 +20783,11 @@
     {
       "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\Services\\Index.cshtml",
       "TargetPath": "Areas\\MCMS\\Views\\Services\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "f:\\MitechCenter.vn\\Areas\\MCMS\\Views\\User\\Update.cshtml",
+      "TargetPath": "Areas\\MCMS\\Views\\User\\Update.cshtml",
       "FileKind": "mvc"
     },
     {

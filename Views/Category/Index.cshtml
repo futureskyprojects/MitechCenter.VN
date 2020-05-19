@@ -108,7 +108,7 @@
                         @foreach (News news in ViewBag.news)
                         {
                             <div class="media post_item">
-                                <div style="background: url(@news.nFeatureImage);background-position: center;background-repeat: no-repeat;background-size: cover;width:80px;height:80px;"></div>
+                                <div style="background: url('@news.nFeatureImage');background-position: center;background-repeat: no-repeat;background-size: cover;width:80px;height:80px;"></div>
                                 <div class="media-body">
                                     <a href="/Post/@news.getPath()">
                                         <h3 class="text-line">@news.nDescription</h3>
@@ -118,7 +118,7 @@
                             </div>
                         }
                     </aside>
-                    <aside class="single_sidebar_widget newsletter_widget">
+                    @*<aside class="single_sidebar_widget newsletter_widget">
                         <h4 class="widget_title">Nhận tin từ chúng tôi</h4>
                         <form action="#">
                             <div class="form-group">
@@ -127,7 +127,7 @@
                             </div>
                             <button class="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Theo dõi</button>
                         </form>
-                    </aside>
+                    </aside>*@
                 </div>
             </div>
         </div>

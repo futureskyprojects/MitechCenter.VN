@@ -9,12 +9,32 @@ namespace MitechCenter.vn.Controllers
 {
     public class ContactController : Controller
     {
-        public ContactController()
+        private readonly IDataRepository<Feedback> _feedback;
+        public ContactController(IDataRepository<Feedback> feedback)
         {
+            this._feedback = feedback;
         }
         public IActionResult Index()
         {
-            return View();
+            return View(new Feedback());
+        }
+
+        [HttpPost]
+        public IActionResult SendContact(Feedback feedback)
+        {
+            feedback.fAddress = "Phản hồi đến từ [LIÊN HỆ]";
+            _feedback.Add(feedback);
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public IActionResult SendFeedback(Feedback feedback)
+        {
+            if (ModelState.IsValid)
+            {
+                _feedback.Add(feedback);
+            }
+            return RedirectToAction("Index", "Home");
         }
     }
 }

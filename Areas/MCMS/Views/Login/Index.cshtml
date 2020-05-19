@@ -1,4 +1,6 @@
-﻿@{
+﻿@using MitechCenter.vn.Models
+@model User
+@{
 	ViewData["Title"] = "LOGIN";
 	Layout = "../Shared/AuthenticationLayout.cshtml";  
 }
@@ -29,13 +31,20 @@
 						<img src="assets/images/big/icon.png" alt="wrapkit">
 					</div> *@
 					<h2 class="mt-3 text-center">ĐĂNG NHẬP</h2>
-					<p class="text-center" style="font-size: 12px;">Nhập tài khoản và mật khẩu của bạn để truy cập trang quản trị.</p>
-					<form class="mt-4">
+					<p class="text-center" style="font-size: 12px;">
+						@if (ViewBag.notification == null) {
+							Html.Raw("Nhập tài khoản và mật khẩu của bạn để truy cập trang quản trị.");
+						} else {
+							Html.Raw(ViewBag.notification);
+						}
+					</p>
+					<form class="mt-4" method="post" asp-action="Login" asp-controller="Login">
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="form-group">
 									<label class="text-dark" for="uname">Tên đăng nhập</label>
 									<input class="form-control" id="uname" type="text"
+									asp-for="username"
 										placeholder="Nhập tên đăng nhập">
 								</div>
 							</div>
@@ -43,6 +52,7 @@
 								<div class="form-group">
 									<label class="text-dark" for="pwd">Mật khẩu</label>
 									<input class="form-control" id="pwd" type="password"
+									asp-for="encryptPassword"
 										placeholder="Nhập mật khẩu">
 								</div>
 							</div>

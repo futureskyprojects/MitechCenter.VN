@@ -210,3 +210,15 @@ F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Course\Create.
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Course\Delete.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Course\Update.cshtml.g.cs
 F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Shared\Components\LoggedUser\Default.cshtml.g.cs
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\MitechCenter.vn\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\Shared\Components\RoleMenu\Default.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\User\Create.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\User\Delete.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\User\Index.cshtml.g.cs
+F:\MitechCenter.vn\obj\Debug\netcoreapp3.1\Razor\Areas\MCMS\Views\User\Update.cshtml.g.cs

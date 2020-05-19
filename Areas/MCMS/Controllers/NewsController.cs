@@ -12,10 +12,13 @@ using System.Threading.Tasks;
 using System.IO;
 using System;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authorization;
+using System.Linq;
 
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0,1")]
     public class NewsController : Controller
     {
         private readonly IDataRepository<News> _context;
@@ -51,7 +54,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                news.uId = 1;
+                news.uId = int.Parse(User.Claims.FirstOrDefault(c => c.Type == "ID").Value);
                 // contentProcessing(news.nContent);
                 _context.Add(news);
                 return RedirectToAction(nameof(Index), new { id = news.ncId.ToString() });

@@ -13,10 +13,12 @@ namespace MitechCenter.vn.Controllers
     {
         private readonly IDataRepository<News> _context;
         private readonly IDataRepository<NewsCategory> _context_temp;
-        public PostController(IDataRepository<News> context, IDataRepository<NewsCategory> context_temp)
+        private readonly IDataRepository<Feedback> _feedback;
+        public PostController(IDataRepository<News> context, IDataRepository<NewsCategory> context_temp, IDataRepository<Feedback> feedback)
         {
             this._context = context;
             this._context_temp = context_temp;
+            this._feedback = feedback;
         }
 
         [HttpGet("{id}")]
@@ -34,7 +36,10 @@ namespace MitechCenter.vn.Controllers
                     ViewBag.newCategories = newCategories;
                     ViewBag.nextNews = ((NewsManager)_context).getNextPost(newsId, news.ncId);
                     ViewBag.previousNews = ((NewsManager)_context).getPreviousPost(newsId, news.ncId);
-                    return View(news);
+                    ViewBag.currentPost = news;
+                    Feedback f = new Feedback();
+                    f.fAddress = "Feedback từ [" + news.getPath() + "]";
+                    return View(f);
                 }
                 catch (Exception)
                 {

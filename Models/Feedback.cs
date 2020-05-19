@@ -12,7 +12,7 @@ namespace MitechCenter.vn.Models
     {
         [Key]
         public int fId { get; set; }
-        public int fFullname { get; set; }
+        public string fFullname { get; set; }
         public string fAddress { get; set; }
         public string fPhone { get; set; }
         public string fEmail { get; set; }

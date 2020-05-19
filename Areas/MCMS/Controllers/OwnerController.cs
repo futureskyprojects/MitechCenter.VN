@@ -5,10 +5,12 @@ using MitechCenter.vn.Models;
 using MitechCenter.vn.statics;
 using System;
 using MitechCenter.vn.Areas.MCMS.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0")]
     public class OwnerController : Controller
     {
         private readonly IDataRepository<StaticElement> _context;

@@ -9,10 +9,12 @@ using System.Diagnostics;
 using System.IO;
 using MitechCenter.vn.Areas.MCMS.Models;
 using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0,2")]
     public class TeacherController : Controller
     {
         private readonly IDataRepository<Teacher> _context;
@@ -55,7 +57,7 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
                         {
                             await avatar.CopyToAsync(fs);
                             teacher.tAvatar = newPath;
-                            if (teacher != null && teacher.tId >= 0)
+                            if (teacher != null && teacher.tId > 0)
                             {
                                 _context.Update(_context.Get(teacher.tId), teacher);
                             }
@@ -74,14 +76,14 @@ namespace MitechCenter.vn.Areas.MCMS.Controllers
             }
             catch (Exception)
             {
-                if (teacher != null && teacher.tId >= 0)
+                if (teacher != null && teacher.tId > 0)
                 {
                     _context.Update(_context.Get(teacher.tId), teacher);
                     return RedirectToAction("Index");
                 }
                 TempData["ERROR_NOTIFY"] = Notification.Error("LỖI", "Chưa chọn ảnh cho giảng viên này");
             }
-            if (teacher != null && teacher.tId >= 0)
+            if (teacher != null && teacher.tId > 0)
             {
                 return RedirectToAction("Update", new { id = teacher.tId });
             }

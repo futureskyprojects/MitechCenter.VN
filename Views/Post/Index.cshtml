@@ -1,19 +1,20 @@
 @using MitechCenter.vn.Models
-@model News
+@model Feedback
 
 @{
+    News currentPost = ViewBag.currentPost;
     Layout = "~/Views/Shared/_MetaLayout.cshtml";
-    ViewData["Title"] = Model.nTitle;
+    ViewData["Title"] = currentPost.nTitle;
 }
 <!-- breadcrumb start-->
-<section class="breadcrumb breadcrumb_bg" style="background: url(@Model.nFeatureImage);background-position: center;background-repeat: no-repeat;background-size: cover;">
+<section class="breadcrumb breadcrumb_bg" style="background: url('@currentPost.nFeatureImage');background-position: center;background-repeat: no-repeat;background-size: cover;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb_iner text-center">
                     <div class="breadcrumb_iner_item">
-                        <h2>@Model.nTitle</h2>
-                        <p>Trang chủ<span>></span>@Model.NewsCategory.ncName</p>
+                        <h2>@currentPost.nTitle</h2>
+                        <p>Trang chủ<span>></span>@currentPost.NewsCategory.ncName</p>
                     </div>
                 </div>
             </div>
@@ -28,17 +29,17 @@
             <div class="col-lg-8 posts-list">
                 <div class="single-post">
                     <div class="feature-img">
-                        <img class="img-fluid" src="@Model.nFeatureImage" alt="">
+                        <img class="img-fluid" src="@currentPost.nFeatureImage" alt="" style="width: 100%;">
                     </div>
                     <div class="blog_details">
                         <h2>
-                            @Model.nTitle
+                            @currentPost.nTitle
                         </h2>
                         <ul class="blog-info-link mt-3 mb-4">
-                            <li><a href="#"><i class="far fa-user"></i>@Model.nTags</a></li>
-                            <li><a href="#"><i class="far fa-comments"></i> @(Model.createAt!=null?((DateTime)@Model.createAt).ToString("HH:mm dd/MM/yyyy"):"MITECHCENTER.VN")</a></li>
+                            <li><a href="#"><i class="far fa-user"></i>@currentPost.nTags</a></li>
+                            <li><a href="#"><i class="far fa-comments"></i> @(currentPost.createAt!=null?((DateTime)currentPost.createAt).ToString("HH:mm dd/MM/yyyy"):"MITECHCENTER.VN")</a></li>
                         </ul>
-                        @Html.Raw(Model.nContent);
+                        @Html.Raw(currentPost.nContent);
                     </div>
                 </div>
                 <div class="navigation-top">
@@ -103,27 +104,28 @@
                 </div>
                 <div class="comment-form">
                     <h4>Ý kiến của bạn (Vui lòng viết tiếng Việt có dấu)</h4>
-                    <form class="form-contact comment_form" action="#" id="commentForm">
+                    <form class="form-contact comment_form" asp-action="SendFeedback" asp-controller="Contact">
+                        @Html.HiddenFor(x=>x.fAddress)
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
+                                    <textarea asp-for="fContent" class="form-control w-100" cols="30" rows="9"
                                               placeholder="Nội dung ý kiến"></textarea>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="name" id="name" type="text" placeholder="Họ và tên">
+                                    <input asp-for="fFullname" class="form-control" type="text" placeholder="Họ và tên">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="email" id="email" type="email" placeholder="Số điện thoại">
+                                    <input asp-for="fPhone" class="form-control" type="tel" placeholder="Số điện thoại">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <input class="form-control" name="website" id="website" type="text" placeholder="Liên hệ khác (VD: Địa chỉ email)">
+                                    <input asp-for="fEmail" class="form-control" type="text" placeholder="Liên hệ khác (VD: Địa chỉ email)">
                                 </div>
                             </div>
                         </div>
@@ -168,7 +170,7 @@
                         @foreach (News news in ViewBag.news)
                         {
                             <div class="media post_item">
-                                <div style="background: url(@news.nFeatureImage);background-position: center;background-repeat: no-repeat;background-size: cover;width:80px;height:80px;"></div>
+                                <div style="background: url('@news.nFeatureImage');background-position: center;background-repeat: no-repeat;background-size: cover;width:80px;height:80px;"></div>
                                 <div class="media-body">
                                     <a href="/Post/@news.getPath()">
                                         <h3 class="text-line">@news.nDescription</h3>
@@ -178,27 +180,30 @@
                             </div>
                         }
                     </aside>
-                    <aside class="single_sidebar_widget tag_cloud_widget">
-                        <h4 class="widget_title">Các Tag</h4>
-                        <ul class="list">
-                            @foreach (string tag in Model.nTags.Split(","))
-                            {
-                                <li>
-                                    <a href="#">@(tag.Trim())</a>
-                                </li>
-                            }
-                        </ul>
-                    </aside>
-                    <aside class="single_sidebar_widget newsletter_widget">
-                        <h4 class="widget_title">Nhận tin từ chúng tôi</h4>
-                        <form action="#">
-                            <div class="form-group">
-                                <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                       onblur="this.placeholder = 'Nhập Email vào đây'" placeholder='Nhập Email vào đây' required>
-                            </div>
-                            <button class="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Theo dõi</button>
-                        </form>
-                    </aside>
+                    @if (currentPost.nTags != null && currentPost.nTags.Length > 0)
+                    {
+                        <aside class="single_sidebar_widget tag_cloud_widget">
+                            <h4 class="widget_title">Các Tag</h4>
+                            <ul class="list">
+                                @foreach (string tag in currentPost.nTags.Split(","))
+                                {
+                                    <li>
+                                        <a href="#">@(tag.Trim())</a>
+                                    </li>
+                                }
+                            </ul>
+                        </aside>
+                    }
+                    @*<aside class="single_sidebar_widget newsletter_widget">
+                            <h4 class="widget_title">Nhận tin từ chúng tôi</h4>
+                            <form action="#">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                           onblur="this.placeholder = 'Nhập Email vào đây'" placeholder='Nhập Email vào đây' required>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Theo dõi</button>
+                            </form>
+                        </aside>*@
                 </div>
             </div>
         </div>

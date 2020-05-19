@@ -1,5 +1,6 @@
 
 using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MitechCenter.vn.Models;
 using MitechCenter.vn.Models.Repository;
@@ -8,6 +9,7 @@ using MitechCenter.vn.statics;
 namespace MitechCenter.vn.Areas.MCMS.Controllers
 {
     [Area("MCMS")]
+    [Authorize(Roles = "0,2")]
     public class EducationProgramController : Controller
     {
         private readonly IDataRepository<StaticElement> _context;

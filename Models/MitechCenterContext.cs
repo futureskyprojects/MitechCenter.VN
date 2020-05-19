@@ -53,7 +53,6 @@ namespace MitechCenter.vn.Models
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable(typeof(User).Name);
-                entity.HasIndex(e => e.uId).HasName("FK_" + typeof(User).Name + "_Id_Index");
                 entity.Property(e => e.createAt).HasDefaultValueSql("GETDATE()");
                 entity.Property(e => e.updateAt).HasDefaultValueSql("GETDATE()");
             });

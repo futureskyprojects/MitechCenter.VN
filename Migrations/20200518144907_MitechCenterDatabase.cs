@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MitechCenter.vn.Migrations
 {
-    public partial class MitechCenterDatabaseCreation : Migration
+    public partial class MitechCenterDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -95,6 +95,7 @@ namespace MitechCenter.vn.Migrations
                     cDescription = table.Column<string>(nullable: true),
                     cDetail = table.Column<string>(nullable: true),
                     cSchedule = table.Column<string>(nullable: true),
+                    cImage = table.Column<string>(nullable: true),
                     createAt = table.Column<DateTime>(nullable: true, defaultValueSql: "GETDATE()"),
                     updateAt = table.Column<DateTime>(nullable: true, defaultValueSql: "GETDATE()")
                 },
@@ -197,17 +198,17 @@ namespace MitechCenter.vn.Migrations
                 columns: new[] { "eId", "createAt", "eData", "eDescription", "eKey", "updateAt" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 5, 1, 15, 4, 3, 447, DateTimeKind.Local).AddTicks(3043), "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc", "", "OWNER", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(4495) },
-                    { 2, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5122), "assets/images/logo-icon.png", "", "LOGO", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5144) },
-                    { 3, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5157), "", "", "CAROUSEL", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5159) },
-                    { 4, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5161), "", "", "DEVELOPMENT_MOTTO", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5163) },
-                    { 5, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5164), "", "", "SERIVE_MOTTO", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5166) },
-                    { 6, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5167), "", "", "PARTNER", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5169) },
-                    { 7, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5171), "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.", "", "DECIDE_TO_ESTABLISH", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5172) },
-                    { 8, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5174), "", "", "CONTACT_INFO", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5175) },
-                    { 9, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5177), "", "", "EMBED", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5178) },
-                    { 10, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5180), "Copyright © Trung Tâm CNTT & NN Đại học Thông Tin Liên Lạc", "", "COPY_RIGHT", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5181) },
-                    { 11, new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5184), "", "", "EDUCATION_PROGRAM", new DateTime(2020, 5, 1, 15, 4, 3, 448, DateTimeKind.Local).AddTicks(5185) }
+                    { 1, new DateTime(2020, 5, 18, 21, 49, 6, 852, DateTimeKind.Local).AddTicks(8924), "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc", "", "OWNER", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(1568) },
+                    { 2, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2600), "assets/images/logo-icon.png", "", "LOGO", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2636) },
+                    { 3, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2661), "", "", "CAROUSEL", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2664) },
+                    { 4, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2668), "", "", "DEVELOPMENT_MOTTO", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2671) },
+                    { 5, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2675), "", "", "SERIVE_MOTTO", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2677) },
+                    { 6, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2682), "", "", "PARTNER", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2685) },
+                    { 7, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2688), "Trung tâm CNTT & NN - Trường ĐH Thông Tin Liên Lạc (Mitech Center) thành lập theo Quyết định số 988/QĐ-BQP ngày 28/3/2015 của BQP, có chức năng đào tạo, nghiên cứu và cung cấp dịch vụ CNTT.", "", "DECIDE_TO_ESTABLISH", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2691) },
+                    { 8, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2695), "", "", "CONTACT_INFO", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2699) },
+                    { 9, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2702), "", "", "EMBED", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2705) },
+                    { 10, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2709), "Copyright © Trung Tâm CNTT & NN Đại học Thông Tin Liên Lạc", "", "COPY_RIGHT", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2711) },
+                    { 11, new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2715), "", "", "EDUCATION_PROGRAM", new DateTime(2020, 5, 18, 21, 49, 6, 854, DateTimeKind.Local).AddTicks(2718) }
                 });
 
             migrationBuilder.CreateIndex(
@@ -281,11 +282,6 @@ namespace MitechCenter.vn.Migrations
                 name: "IX_User_UseruId",
                 table: "User",
                 column: "UseruId");
-
-            migrationBuilder.CreateIndex(
-                name: "FK_User_Id_Index",
-                table: "User",
-                column: "uId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

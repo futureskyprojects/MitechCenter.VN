@@ -1,6 +1,9 @@
-﻿@{
+﻿@using MitechCenter.vn.Models
+@model IEnumerable<Course>
+@{
     Layout = "~/Views/Shared/_MetaLayout.cshtml";
     ViewData["Title"] = "COURSE";
+    IEnumerable<Teacher> teachers = ViewBag.Teachers;
 }
 <!-- breadcrumb start-->
 <section class="breadcrumb breadcrumb_bg" style="background: url('./img/tt1.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;">
@@ -19,7 +22,7 @@
 </section>
 <!-- breadcrumb start-->
 <!--::review_part start::-->
-<section class="special_cource padding_top">
+<section class="special_cource padding_top mb-5" style="margin-top: -50px">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-5">
@@ -30,106 +33,76 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-6 col-lg-4">
-                <div class="single_special_cource">
-                    <img src="img/special_cource_1.png" class="special_img" alt="">
-                    <div class="special_cource_text">
-                        <a href="course-details.html" class="btn_4">Web Development</a>
-                        <h4>$130.00</h4>
-                        <a href="course-details.html">
-                            <h3>Web Development</h3>
-                        </a>
-                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                        <div class="author_info">
-                            <div class="author_img">
-                                <img src="img/author/author_1.png" alt="">
-                                <div class="author_info_text">
-                                    <p>Conduct by:</p>
-                                    <h5><a href="#">James Well</a></h5>
-                                </div>
-                            </div>
-                            <div class="author_rating">
-                                <div class="rating">
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                </div>
-                                <p>3.8 Ratings</p>
-                            </div>
+            @foreach (Course course in Model)
+            {
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_special_cource">
+                        <img src="@course.cImage" class="special_img" alt="">
+                        <div class="special_cource_text">
+                            <a href="course-details.html" class="btn_4">@course.cLearningTime</a>
+                            <h4>@String.Format("{0:###,###,###,###}", course.cPrice) (VNĐ)</h4>
+                            <a href="course-details.html">
+                                <h3>@course.cName</h3>
+                            </a>
+                            <p>@course.cDescription</p>
+                            @foreach (Teacher teacher in teachers)
+                            {
+                                if (teacher.tId == course.tId)
+                                {
+                                    <div class="author_info">
+                                        <div class="author_img">
+                                            <img src="@teacher.tAvatar" alt="">
+                                            <div class="author_info_text">
+                                                <p>Giảng viên</p>
+                                                <h5><a href="#">@teacher.tDisplayName</a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    break;
+                                }
+                            }
                         </div>
-                    </div>
 
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="single_special_cource">
-                    <img src="img/special_cource_2.png" class="special_img" alt="">
-                    <div class="special_cource_text">
-                        <a href="course-details.html" class="btn_4">design</a>
-                        <h4>$160.00</h4>
-                        <a href="course-details.html">
-                            <h3>Web UX/UI Design </h3>
-                        </a>
-                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                        <div class="author_info">
-                            <div class="author_img">
-                                <img src="img/author/author_2.png" alt="">
-                                <div class="author_info_text">
-                                    <p>Conduct by:</p>
-                                    <h5><a href="#">James Well</a></h5>
-                                </div>
-                            </div>
-                            <div class="author_rating">
-                                <div class="rating">
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                </div>
-                                <p>3.8 Ratings</p>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-                <div class="single_special_cource">
-                    <img src="img/special_cource_3.png" class="special_img" alt="">
-                    <div class="special_cource_text">
-                        <a href="course-details.html" class="btn_4">Wordpress</a>
-                        <h4>$140.00</h4>
-                        <a href="course-details.html">
-                            <h3>Wordpress Development</h3>
-                        </a>
-                        <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
-                        <div class="author_info">
-                            <div class="author_img">
-                                <img src="img/author/author_3.png" alt="">
-                                <div class="author_info_text">
-                                    <p>Conduct by:</p>
-                                    <h5><a href="#">James Well</a></h5>
-                                </div>
-                            </div>
-                            <div class="author_rating">
-                                <div class="rating">
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/color_star.svg" alt=""></a>
-                                    <a href="#"><img src="img/icon/star.svg" alt=""></a>
-                                </div>
-                                <p>3.8 Ratings</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
 <!--::blog_part end::-->
+
+@section styles {
+    <style>
+        .special_img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .author_img img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .single_special_cource p {
+            text-align: justify;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            font-size:18px;
+        }
+
+        .special_cource .single_special_cource .special_cource_text h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+            -webkit-box-orient: vertical;
+            font-size: 26px;
+        }
+    </style>
+}

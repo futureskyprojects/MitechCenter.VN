@@ -30,12 +30,15 @@ namespace MitechCenter.vn.Models
         {
             this.uId = user.uId;
             this.username = user.username;
-            this.encryptPassword = user.encryptPassword;
             this.displayName = user.displayName;
             this.avatar = user.avatar;
             this.role = user.role;
             this.createAt = user.createAt;
             this.updateAt = user.updateAt;
+            if (user.encryptPassword != null && user.encryptPassword.Length > 8)
+            {
+                this.encryptPassword = Password.Encrypt(user.encryptPassword);
+            }
         }
     }
 }
